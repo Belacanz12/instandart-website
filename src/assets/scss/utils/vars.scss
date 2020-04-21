@@ -1,44 +1,69 @@
-/* Vars:
-   ========================================================================== */
+// Grid
+$sm-screen-min: 320;
+$md-screen-min: 768;
+$lg-screen-min: 1024;
+$xl-screen-min: 1400;
 
-// Font
-$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+$mobile-viewport: "(max-width: #{$lg-screen-min - 1}px)";
+$sm-viewport: "only screen and (min-width: #{$sm-screen-min}px)";
+$md-viewport: "only screen and (min-width: #{$md-screen-min}px)";
+$lg-viewport: "only screen and (min-width: #{$lg-screen-min}px)";
+$xl-viewport: "only screen and (min-width: #{$xl-screen-min}px)";
 
-// Size
-$mainFontColor           : #101010;
-$mainFontSize            : 18px;
-$mainFontWeight          : 400;
-$mainLineHeight          : 1.4;
+$gutter-width: 10px;
+$mobile-gutter-reduce: 8px;
+$half-gutter-width: $gutter-width * 0.5;
+$gutter-compensation: ($gutter-width * 0.5) * -1;
 
-$desktopWidth            : 1280px;
-$smDesktopWidth          : 1024px;
-$tableWidth              : 768px;
-$smTableWidth            : 640px;
-$phoneWidth              : 480px;
-$smPhoneWidth            : 320px;
+$grid-columns: 12;
 
-/*
- All colors taken from:
- https://github.com/vedees/uimini
-*/
+// Colors
 
-// Main color
-$default-color           : #ffffff;
-$primary-color           : #444ce0;
-$success-color           : #26de81;
-$danger-color            : #fc5c65;
-$warning-color           : #fed330;
-$light-color             : #999999;
-$purple-color            : #8854d0;
+/**
+    darkerColor
+    darkColor
+    Color
+    Color33
+    ColorAA
+    Color3E
+    lightColor
+    lighterColor
+ */
 
-// Neutral Color
-$neutral-primary         : #303133;
-$neutral-regular         : #606266;
-$neutral-secondary       : #909399;
-$neutral-placeholder     : #C0C4CC;
+$black:   #000;
+$black17: #171717;
+$black15: #151515;
+$grey:    #343434;
+$greyb8:  #b8b8b8;
+$yellow:  #ffe462;
+$white: #fff;
 
-// Border Color
-$border-base             : #DCDFE6;
-$border-light            : #E4E7ED;
-$border-lighter          : #EBEEF5;
-$border-lightex          : #F2F6FC;
+$black17_invert: #eaeaea;
+$grey_invert: #8a8a8a;
+$greyCC_invert: #ccc;
+$greyDF_invert: #dfdfdf;
+$grey40_invert: #404040;
+
+// Sizes
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-border-radius: 6px;
+
+// Fonts
+// -------------------------------
+$font-size: 18px;
+$font-family-lato: 'Lato', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+// -------------------------------
+
+// Animation
+// -------------------------------
+$mobile-nav-animation-time: 0.4s;
+// -------------------------------
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.

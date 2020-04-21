@@ -1,0 +1,330 @@
+@import "../utils/vars";
+@import "../theme/theme";
+
+.animation-link {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+
+    @include themify($themes) {
+      background: themed('linkColor');
+    }
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    animation: line_hover_out .5s cubic-bezier(.785,.135,.15,.86) both;
+  }
+}
+
+.header-font {
+  //color: $black17;
+  font-family: $font-family-lato;
+  font-weight: 900;
+
+  @include themify($themes) {
+    color: themed('headerTextColor');
+  }
+}
+
+h1, .h1 {
+  @extend .header-font;
+  font-size: 60px;
+}
+
+h2, .h2 {
+  @extend .header-font;
+  font-size: 56px;
+}
+
+h3, .h3 {
+  @extend .header-font;
+  font-size: 46px;
+}
+
+h4, .h4 {
+  @extend .header-font;
+  font-size: 36px;
+}
+
+h5, .h5 {
+  @extend .header-font;
+  font-size: 26px;
+}
+
+h6, .h6 {
+  @extend .header-font;
+  font-size: 16px;
+}
+
+.text {
+  &_header {
+    @extend .header-font;
+    font-size: 36px;
+    margin: 0 0 40px;
+  }
+
+  &_body {
+    font-size: 18px;
+    line-height: 30px;
+    font-family: $font-family-lato;
+    font-weight: 400;
+    margin: 0 0 40px;
+
+    @include themify($themes) {
+      color: themed('textColor');
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.quote {
+  margin: 40px 0;
+  padding: 0 0 0 40px;
+
+  @include themify($themes) {
+    color: themed('textColor');
+  }
+
+  &_body {
+    font-family: $font-family-lato;
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 900;
+    position: relative;
+
+    &:after {
+      content: '“';
+      position: absolute;
+      font-size: 60px;
+      left: -25px;
+      top: 10px;
+    }
+  }
+
+  &_meta {
+    font-size: 16px;
+    margin: 10px 0 0;
+  }
+
+  &_author {
+    font-weight: bold;
+    padding: 0 8px 0 0;
+    display: inline-block;
+  }
+
+  &_additional {
+    display: inline-block;
+  }
+}
+
+.list {
+  margin: 40px 0 40px 40px;
+  list-style: disc inside;
+
+  @include themify($themes) {
+    color: themed('textColor');
+  }
+
+  &_item {
+    line-height: 28px;
+    font-size: $font-size;
+    padding: 0 0 30px;
+    &:last-child {
+      padding: 0;
+    }
+  }
+  &-numeric{
+    list-style: decimal inside;
+  }
+}
+
+.link {
+  @extend .animation-link;
+  font-family: $font-family-lato;
+  font-size: 18px;
+  font-weight: 700;
+  overflow: hidden;
+  position: relative;
+
+  @include themify($themes) {
+    color: themed('linkColor');
+  }
+
+  &:link {
+
+  }
+
+  &:active {
+    outline: 0;
+  }
+
+  &:visited {
+
+  }
+
+  &:hover {
+
+    @include themify($themes) {
+      color: themed('linkColor');
+    }
+
+    text-decoration: none;
+    &:after {
+      animation: line_hover_in .5s cubic-bezier(.785,.135,.15,.86) both;
+    }
+  }
+}
+
+.section-title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-family: $font-family-lato;
+
+  &_left {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+
+    @include themify($themes) {
+      color: themed('sectionTextColor');
+    }
+  }
+
+  &_right {
+    font-size: 14px;
+    font-weight: 900;
+    padding: 0 10px 0 0;
+    position: relative;
+
+    @include themify($themes) {
+      color: themed('textColor');
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: -5px;
+      width: 8px;
+      height: 8px;
+
+      @include themify($themes) {
+        background: themed('arrowBgc')
+      }
+    }
+
+    &:hover {
+      @include themify($themes) {
+        color: themed('textColor');
+      }
+      text-decoration: none;
+    }
+  }
+}
+
+.rounded-link{
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  transition: all .5s ease;
+
+  span {
+    width: 56px;
+    height: 56px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: $yellow;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease;
+  }
+
+  &:after, &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 14px;
+    background: url("/assets/img/icons/arrow_link_black.svg") center no-repeat transparent;
+    transition: left .5s ease;
+  }
+
+  &:after {
+    left: 50%;
+  }
+
+  &:before {
+    left: -50%;
+    z-index: 1;
+  }
+
+  &:hover {
+    span{
+      width: 60px;
+      height: 60px;
+    }
+
+    &:after {
+      left: 150%
+    }
+
+    &:before {
+      left: 50%;
+    }
+  }
+}
+
+.active-item {
+  $size: 12px;
+
+  text-transform: uppercase;
+  font-family: $font-family-lato;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 25px;
+  position: relative;
+
+  @include themify($themes) {
+    color: themed('textColor');
+  }
+
+  &:before {
+    content: '';
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $yellow;
+    position: absolute;
+    top: calc(50% - #{$size/2});
+    left: 0;
+    transition: background-color .5s ease;
+  }
+
+  &:hover {
+    &:before {
+      background-color: transparent;
+    }
+  }
+}

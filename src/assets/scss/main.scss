@@ -4,103 +4,35 @@
 @import "utils/fonts";
 @import "utils/reset";
 
-html {
-  line-height: $mainLineHeight;
-  font-size: $mainFontSize;
-  color: $mainFontColor;
-  height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
-  }
-}
+// base
+@import "base/global_style";
+@import "base/animation";
+@import "base/fonts";
+@import "base/grid";
+@import "base/ui-kit";
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: $mainFont;
-  font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// layouts
+@import "layouts/index";
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+// particles
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
+  // header
+@import "particles/header/control_panel";
+@import "particles/header/header";
+@import "particles/header/logo";
+@import "particles/header/select_filters";
+@import "particles/header/settings_panel";
 
-a {
-  text-decoration: none;
-}
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+@import "particles/aside";
+@import "particles/button";
+@import "particles/footer";
+@import "particles/icon";
+@import "particles/cursor";
+@import "particles/test";
 
-section,
-.section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $smDesktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $tableWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    padding: 20px 0;
-  }
-}
+// main styles
+//@import 'styles';
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-  min-width: 100vh;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  width: 100%;
-  flex: 0 0 auto;
-  position: relative;
-  margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
-  }
-}
-
-// Modules:
-// example: @import "modules/my-module.scss";
+// media
+@import "base/media";
