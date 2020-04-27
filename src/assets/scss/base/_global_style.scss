@@ -1,7 +1,13 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
 @import "../utils/vars";
 
 html, body {
-  font-size: 10px;
   font-family: $font-family-roboto;
+}
+
+.clearfix:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }

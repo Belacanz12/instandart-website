@@ -1,0 +1,57 @@
+@import "../utils/vars";
+@import "../theme/theme";
+
+.form {
+  &_buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  &_reset {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0 20px 0 0;
+    position: relative;
+    color: #b4b4b4;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: $font-family-lato;
+    &:after{
+      $size: 11px;
+      content: '';
+      width: $size;
+      height: $size;
+      position: absolute;
+      top: calc(50% - #{($size - 1)/2});
+      right: 0;
+      background: no-repeat url("/assets/img/icons/cross_small.svg") transparent;
+    }
+  }
+
+  &_submit {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+  &_helper-text {
+    text-align: right;
+    color: #7e7e7e;
+    padding: 10px 0 0;
+    font-size: 12px;
+    opacity: 0
+  }
+
+  .input-field {
+    input, textarea {
+      font-size: 1.2rem !important;
+      @include themify($themes) {
+        color: themed('textColor')
+      }
+    }
+  }
+}
+
+

@@ -1,3 +1,6 @@
+// materialize
+@import "~materialize-css/sass/materialize";
+
 @import "utils/libs";
 @import "utils/vars";
 @import "utils/mixins";
@@ -11,6 +14,7 @@
 @import "base/grid";
 @import "base/ui-kit";
 
+
 // layouts
 @import "layouts/index";
 
@@ -23,7 +27,7 @@
 @import "particles/header/select_filters";
 @import "particles/header/settings_panel";
 
-
+@import "particles/form";
 @import "particles/aside";
 @import "particles/button";
 @import "particles/footer";
@@ -31,8 +35,7 @@
 @import "particles/cursor";
 @import "particles/test";
 
-// main styles
-//@import 'styles';
+
 
 // media
 @import "base/media";

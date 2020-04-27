@@ -1,10 +1,16 @@
 include ../utils/mixins
 block variables
+  - var title = 'Webpack + Pug';
+  - var description = 'Materialize is a modern responsive CSS framework based on Material Design by Google. ';
+  - var pageClass = 'index-page';
 
 doctype html
 html(lang='en')
   head
-    meta(charset='utf-8')
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="msapplication-tap-highlight" content="no")
     title #{title}
     meta(name="description", content=description)
     block head

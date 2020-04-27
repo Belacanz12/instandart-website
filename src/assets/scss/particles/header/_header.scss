@@ -1,2 +1,40 @@
-.header {
+@import "../../utils/vars";
+$height: 70px;
+
+header {
+  position: relative;
+  width: 100%;
+  height: $height !important;
+
+  .brand-logo {
+    top: 0;
+    bottom: 0;
+    line-height: 70px;
+  }
+
+  nav {
+    height: $height !important;
+    background-color: $black;
+
+    a {
+      color: #626262;
+      font-family: $font-family-roboto;
+      transition: color $desktop-nav-animation-time ease;
+      padding: 0 35px;
+
+      &:hover {
+        color: $white;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+
+    .active-item {
+      margin-left: 35px;
+    }
+  }
+
+  li {
+    line-height: $height;
+  }
 }

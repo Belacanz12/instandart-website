@@ -1,38 +1,21 @@
-// Main js file// see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
-import $ from "jquery"
-import 'bootstrap';
+import $ from 'jquery';
 import 'slick-carousel';
-import 'jquery-validation';
-import { WOW } from 'wowjs';
-import Popper from 'popper.js';
+// import { WOW } from 'wowjs';
+// import Popper from 'popper.js';
 
 // gsap
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
+
+import './form';
+import './nav-bar';
 
 $(document).ready(function(){
-  // gsap.to('.box', {duration: 2, x: 100})
-  gsap.to('.box', {
-    filter: 'invert(1)',
-    y: function(index, target, targets) { //function-based value
-      return index * 50;
-    },
-    duration: 1
-  });
-
   const elementTarget =
     [{
       class: '.link',
       width: 50,
       height: 50
-    }, {
-      class: 'ul',
-      width: 50,
-      height: 50
-    }, {
-      class: 'ol',
-      width: 50,
-      height: 50
-    }, {
+    },{
       class: '.section-title_right',
       width: 25,
       height: 25
@@ -57,4 +40,5 @@ $(document).ready(function(){
         })
       })
   });
+
 });
