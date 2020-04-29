@@ -1,0 +1,30 @@
+@import "../../utils/vars";
+
+.info-blocks{
+  display: flex;
+  flex-flow: row wrap;
+
+  .info-block {
+    font-family: $font-family-oswald;
+    min-width: 250px;
+    margin-bottom: 120px;
+
+    &:last-child, &:nth-last-of-type(2){
+      margin-bottom: 0;
+    }
+
+    &_number {
+      font-size: 72px;
+      font-weight: 600;
+      color: $black17;
+    }
+
+    &_text {
+      font-size: 22px;
+      font-weight: 500;
+      width: 150px;
+      line-height: 28px;
+      color: #474747;
+    }
+  }
+}

@@ -18,7 +18,7 @@ function reset() {
 }
 
 $(document).ready(function(){
-  M.textareaAutoResize($('#message'));
+  // M.textareaAutoResize($('#message'));
 
   $('.form_reset').on('click', function(){
     reset();

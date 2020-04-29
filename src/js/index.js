@@ -8,6 +8,7 @@ import 'slick-carousel';
 
 import './form';
 import './nav-bar';
+import './banner-slider';
 
 $(document).ready(function(){
   const elementTarget =
@@ -40,5 +41,4 @@ $(document).ready(function(){
         })
       })
   });
-
 });

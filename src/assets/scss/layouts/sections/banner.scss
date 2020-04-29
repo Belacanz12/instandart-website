@@ -1,0 +1,22 @@
+@import "../../utils/vars";
+
+.page {
+  &_content{
+    height: calc(100vh - 70px);
+  }
+
+  &--banner {
+    .text {
+      &_header {
+        font-size: 90px;
+        font-family: $font-family-roboto;
+      }
+    }
+  }
+}
+
+.banner-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
