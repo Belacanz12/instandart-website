@@ -1,0 +1,41 @@
+@import "../../utils/vars";
+@import "../../theme/theme";
+
+.portfolio-slider{
+  &_item {
+    .page_right_content {
+      padding-right: 2*$containerRightWidth/8;
+    }
+  }
+
+  &_img {
+    width: 100%;
+    position: relative;
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_number {
+    font-family: $font-family-oswald;
+    font-weight: $oswaldSemiBold;
+    margin-bottom: 28px;
+
+    @include themify($themes) {
+      color: themed('headerTextColor');
+    }
+  }
+}
+
+.range-slider {
+  &--portfolio {
+    position: absolute !important;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: calc(50% - #{$containerWidth}/2);
+  }
+}

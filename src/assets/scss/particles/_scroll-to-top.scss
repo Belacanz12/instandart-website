@@ -1,0 +1,54 @@
+@import "../utils/vars";
+$width: 60px;
+
+#scroll-to-top {
+  width: $width;
+  height: $width;
+  position: fixed;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  &:hover {
+    span {
+      height: 52px;
+      background-color: $greyEA;
+      &:before, &:after {
+        background-color: $greyEA;
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    width: 2px;
+    height: 37px;
+    background-color: $grey6a;
+    @extend .transition;
+
+    &:before, &:after {
+      content: '';
+      width: 1.5px;
+      height: 13px;
+      position: absolute;
+      top: 0;
+      @extend .transition;
+      background-color: $grey6a;
+      transform-origin: 0 0;
+    }
+
+    &:before {
+      transform: skew(30deg);
+    }
+
+    &:after {
+      transform: skew(-30deg);
+    }
+  }
+}

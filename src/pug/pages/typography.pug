@@ -40,42 +40,6 @@ block content
             a(href="#").section-title_right View more
           a.rounded-link(href="#")
             span
-      .row
-        .col.s12
-          form.form(action="home.html")
-            .row
-              .col.s6
-                .input-field
-                  input.validate(id="name" type="text" name="name" minlength="4" required)
-                  label(for="name") Your name*
-                  span.helper-text(data-error="Please enter your name" data-success="")
-              .col.s6
-                .input-field
-                  input.validate(id="phone-number" type="text" minlength="8" pattern="" name="phone-number")
-                  label(for="phone-number") Phone number
-                  span.helper-text(data-error="Wrong phone number" data-success="")
-            .row
-              .col.s6
-                .input-field
-                  input.validate(id="subject" type="text" name="subject" minlength="4")
-                  label(for="subject") Subject
-                  span.helper-text(data-error="Please enter your subject" data-success="")
-              .col.s6
-                .input-field
-                  input.validate(id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required)
-                  label(for="email") Email address*
-                  span.helper-text(data-error="The e-mail address entered is invalid!" data-success="")
-            .row
-              .col.s12
-                .input-field
-                  textarea.materialize-textarea(id="message" minlength="10" name="message")
-                  label(for="message") How can we help you ?
-            .row
-              .col.s12
-                .form_buttons
-                  button.form_reset Clear form
-                  button.active-item.form_submit(type="submit") Get started
-                .form_helper-text Please fill in all the highlighted fields and try again.
   section.theme-light
     .container
       .row

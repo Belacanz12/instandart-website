@@ -1,0 +1,41 @@
+@import "../utils/vars";
+
+.cookies {
+  height: 130px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .row {
+    margin-bottom: 0;
+  }
+  &_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_text {
+    color: $grey8a;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: $font-family-roboto;
+    flex: 1;
+  }
+
+  &_button {
+    flex: 0;
+  }
+
+  &_close {
+    flex: 0;
+    cursor: pointer;
+  }
+}

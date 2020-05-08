@@ -1,0 +1,55 @@
+section.theme-dark.page.page--contacts
+  .page_title
+    .container
+      .section-title
+        .section-title_left contacts
+  .page_left
+    .page_left_content
+      .contacts
+        .contacts_item
+          .contacts_item_header Hire us:
+          .contacts_item_body
+            ul.tel
+              li.tel_item.tel_item--usa
+                a(href="tel:") +1 646 9802450
+              li.tel_item.tel_item--ua
+                a(href="tel:") +380 96 7958785
+        .contacts_item
+          .contacts_item_header Partnership and collaboration:
+          .contacts_item_body
+            a.link(href="#") sales@instandart.com
+        .contacts_item
+          .contacts_item_header Careers:
+          .contacts_item_body
+            a.link(href="#") hr@instandart.com
+  .page_right
+    .page_right_content
+      form.form(action="home.html")
+        .form_header Ready to talk business?
+        .row.form_half
+          .form_input.input-field
+            input.validate(class="name" type="text" name="name" minlength="4" required)
+            label(for="name") Your name*
+            span.helper-text(data-error="Please enter your name" data-success="")
+          .form_input.input-field
+            input.validate(class="phone-number" type="text" minlength="8" pattern="" name="phone-number")
+            label(for="phone-number") Phone number
+            span.helper-text(data-error="Wrong phone number" data-success="")
+        .row.form_half
+          .form_input.input-field
+            input.validate(class="subject" type="text" name="subject" minlength="4")
+            label(for="subject") Subject
+            span.helper-text(data-error="Please enter your subject" data-success="")
+          .form_input.input-field
+            input.validate(class="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required)
+            label(for="email") Email address*
+            span.helper-text(data-error="The e-mail address entered is invalid!" data-success="")
+        .row
+          .form_input.input-field
+            textarea.materialize-textarea(class="message" minlength="10" name="message")
+            label(for="message") How can we help you ?
+        .row
+          .form_buttons
+            button.form_reset Clear form
+            button.active-item.form_submit(type="submit") Get started
+          .form_helper-text Please fill in all the highlighted fields and try again.

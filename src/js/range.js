@@ -119,8 +119,8 @@
         arrowPrevElm.on('click', _.onClickPrevArrow.bind(this, _.funcSlickPrev));
         arrowNextElm.on('click', _.onClickNextArrow.bind(this, _.funcSlickNext));
 
-        $(document).on('slick-prev', _.onClickPrevArrow.bind(this, 'trigger'));
-        $(document).on('slick-next', _.onClickNextArrow.bind(this, 'trigger'));
+        $(element).on('slick-prev', _.onClickPrevArrow.bind(this, 'trigger'));
+        $(element).on('slick-next', _.onClickNextArrow.bind(this, 'trigger'));
       }
 
       _.init = function(){

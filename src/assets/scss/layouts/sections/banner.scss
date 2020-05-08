@@ -1,21 +1,33 @@
 @import "../../utils/vars";
 
 .page {
-  &_content{
-    height: calc(100vh - 70px);
-  }
-
   &--banner {
+    border-top: 1px solid $grey28;
     .text {
       &_header {
         font-size: 90px;
-        font-family: $font-family-roboto;
+        line-height: 105px;
       }
+
+      &_body {
+        font-size: 20px;
+        line-height: 36px;
+      }
+    }
+
+    .row {
+      margin-bottom: 0;
     }
   }
 }
 
 .banner-slider {
+  .text {
+    &_header {
+      text-transform: initial;
+    }
+  }
+
   position: relative;
   overflow: hidden;
   width: 100%;

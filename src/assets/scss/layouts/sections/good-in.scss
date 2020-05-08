@@ -1,0 +1,28 @@
+.page {
+  .page_right_content {
+    //padding-right: 2*$containerRightWidth/8;
+  }
+}
+
+.technology {
+  height: 300px;
+
+  .simplebar-content {
+    display: flex;
+    flex-flow: row wrap;
+
+    .technology_item {
+      flex-grow: 1;
+      width: 33%;
+    }
+  }
+
+  .simplebar-track.simplebar-vertical {
+    width: 2px !important;
+    background-color: #d3d3d3;
+
+    .simplebar-scrollbar {
+      background-color: #161616;
+    }
+  }
+}

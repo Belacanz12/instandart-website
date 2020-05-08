@@ -1,0 +1,53 @@
+.contacts{
+  &_item {
+
+    margin-bottom: 75px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_header {
+      font-family: $font-family-oswald;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 40px;
+    }
+
+    &_body {
+
+    }
+  }
+}
+
+.tel {
+  &_item {
+    position: relative;
+    padding: 5px 0 5px 30px;
+
+    a {
+      color: $white;
+      font-family: $font-family-roboto;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    &:after {
+      content: '';
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+
+    &--usa:after {
+      background: url("/assets/img/icons/usa_flag.svg") center no-repeat transparent;
+    }
+
+    &--ua:after {
+      background: url("/assets/img/icons/ukraine_flag.svg") center no-repeat transparent;
+    }
+  }
+}

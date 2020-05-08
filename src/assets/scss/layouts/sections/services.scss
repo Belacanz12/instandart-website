@@ -1,0 +1,37 @@
+.page {
+  &--services {
+    .page_title {
+      top: 90px;
+    }
+  }
+}
+
+.tabs-element {
+  &--services {
+    margin-left: 5px;
+  }
+
+  .tab_item {
+    padding: 0 0 0 25px;
+    max-width: 340px;
+  }
+
+  .text {
+    &_header {
+      font-size: 54px;
+      line-height: 65px;
+      letter-spacing: -0.2px;
+      margin: 0 0 50px 0;
+    }
+
+    &_body {
+      margin: 0 100px 28px 0;
+    }
+  }
+
+  .active-item {
+    font-size: 22px;
+    line-height: 72px;
+    margin-top: 50px;
+  }
+}

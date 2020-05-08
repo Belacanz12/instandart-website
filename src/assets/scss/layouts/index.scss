@@ -1,27 +1,122 @@
 @import './sections/banner';
 @import './sections/company';
+@import './sections/services';
+@import './sections/from-idea-to-product';
+@import './sections/industry';
+@import './sections/portfolio';
+@import './sections/good-in';
+@import './sections/contacts';
+
+$containerWidth: 70%;
+$containerLeftWidth: 2*100%*$containerWidth/(300% - $containerWidth);
+$containerRightWidth: 4*100%*$containerWidth/(300% + $containerWidth);
+
+$containerLeftMaxWidth: calc(1280px/3);
+$containerRightMaxWidth: calc(2*1280px/3);
+
+//$colRightWidth: $containerWidth*100%/(2*(300% - $containerWidth));
+//$colRightMaxWidth: calc(1280px/12);
 
 .container {
   position: relative;
 }
 
 .page {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 970px;
+  color: $containerWidth;
   position: relative;
 
-  &_content{
+  &_wrapper {
     width: 100%;
-    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &_container {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 970px;
+    color: $containerWidth;
+    position: relative;
+  }
+
+  &--services {
+    .page_right {
+      background: url("/assets/img/bgc/bg_services_1.jpg") center no-repeat transparent;
+    }
+  }
+
+  &--industry {
+    .page_right {
+      background: url("/assets/img/bgc/bg_services_1.jpg") center no-repeat transparent;
+    }
+
+    .page_right_content {
+      padding-right: $containerLeftWidth/8
+    }
+  }
+
+  &--company {
+
+  }
+
+  &--portfolio {
+    background: url("/assets/img/bgc/bg-portfolio.jpg") center no-repeat transparent;
+  }
+
+  &--contacts {
+    .page_right {
+      background: url("/assets/img/bgc/bg_contact_us.jpg") center no-repeat transparent;
+    }
+  }
+
+  &--footer {
+    height: 235px;
+    border: 1px solid $grey27;
+  }
+
+  &_content {
+    width: 100%;
+    height: 900px;
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
   }
 
-
   &_title {
     position: absolute;
     left: 0;
     right: 0;
-    top: 0
+    top: 106px;
+    z-index: 1;
+  }
+
+  &_left {
+    justify-content: flex-end;
+    width: calc(50% - #{$containerWidth}/6 + #{$gutter-width-middle}/2);
+  }
+
+  &_right {
+    width: calc(50% + #{$containerWidth}/6 - #{$gutter-width-middle}/2);
+  }
+
+  &_left, &_right {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  &_left_content {
+    width: $containerLeftWidth;
+    max-width: $containerLeftMaxWidth;
+  }
+
+  &_right_content {
+    width: $containerRightWidth;
+    max-width: $containerRightMaxWidth;
+    padding-left: $containerRightWidth/8;
   }
 }

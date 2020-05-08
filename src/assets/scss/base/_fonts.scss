@@ -2,7 +2,18 @@ $fontPath: "...";
 $SemiBold: "family=Oswald:wght@500;600";
 // fonts
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&#{$SemiBold}&family=Roboto&display=swap');
+// Oswald Medium    500
+// Oswald SemiBold  600
+
+// Lato
+// Lato Regular
+// Lato
+
+// Roboto Regular 400
+// Roboto Medium  500
+// Roboto Bold    700
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&#{$SemiBold}&family=Roboto:wght@400;500;700&display=swap');
 
 /* fallback */
 @font-face {
@@ -28,5 +39,4 @@ $SemiBold: "family=Oswald:wght@500;600";
   -webkit-font-smoothing: antialiased;
 }
 
-//font-family: 'Lato', sans-serif;
-//font-family: 'Roboto', sans-serif;
+

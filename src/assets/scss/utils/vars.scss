@@ -10,12 +10,21 @@ $md-viewport: "only screen and (min-width: #{$md-screen-min}px)";
 $lg-viewport: "only screen and (min-width: #{$lg-screen-min}px)";
 $xl-viewport: "only screen and (min-width: #{$xl-screen-min}px)";
 
-$gutter-width: 10px;
+$gutter-width: 18px;
+$gutter-width-middle: 28px;
 $mobile-gutter-reduce: 8px;
 $half-gutter-width: $gutter-width * 0.5;
 $gutter-compensation: ($gutter-width * 0.5) * -1;
 
 $grid-columns: 12;
+
+$containerWidth: 70%;
+
+$containerLeftWidth: 2*100%*$containerWidth/(300% - $containerWidth);
+$containerRightWidth: 4*100%*$containerWidth/(300% + $containerWidth);
+
+$containerLeftMaxWidth: calc(1280px/3);
+$containerRightMaxWidth: calc(2*1280px/3);
 
 // Colors
 
@@ -33,9 +42,19 @@ $grid-columns: 12;
 $black:   #0a0a0a;
 $black17: #171717;
 $black15: #151515;
+$grey42:  #424242;
 $black47: #474747;
 $grey:    #343434;
+$grey30:  #303030;
+$grey27:  #272727;
+$grey28:  #282828;
+$greyE2:  #e2e2e2;
+$greyEA:  #eaeaea;
 $greyb8:  #b8b8b8;
+$grey62:  #626262;
+$grey6a:  #6a6a6a;
+$grey8c:  #8c8c8c;
+$grey8a:  #8a8a8a;
 $yellow:  #ffe462;
 $white: #fff;
 
@@ -56,12 +75,28 @@ $font-size: 18px;
 $font-family-lato: 'Lato', sans-serif;
 $font-family-roboto: 'Roboto', sans-serif;
 $font-family-oswald: 'Oswald', sans-serif;
+
+$oswaldMedium:    500;
+$oswaldSemiBold:  600;
+
+$robotoRegular:   400;
+$robotoMedium:    500;
+$RobotoBold:      700;
+
 // -------------------------------
 
 // Animation
 // -------------------------------
 $mobile-nav-animation-time: 0.4s;
 $desktop-nav-animation-time: 0.3s;
+// -------------------------------
+
+
+// Transition
+// -------------------------------
+.transition {
+  transition: all $desktop-nav-animation-time ease;
+}
 // -------------------------------
 
 //-- Z-index master list

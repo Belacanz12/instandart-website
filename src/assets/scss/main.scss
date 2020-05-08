@@ -10,6 +10,7 @@
 // base
 @import "base/global_style";
 @import "base/animation";
+@import "base/modal-effects";
 @import "base/fonts";
 @import "base/grid";
 @import "base/ui-kit";
@@ -17,6 +18,9 @@
 
 // layouts
 @import "layouts/index";
+
+@import "base/hot-fix-for-pixel-perfect";
+
 
 // modules
 @import "~slick-carousel/slick/slick.css";
@@ -36,8 +40,10 @@
 @import "particles/icon";
 @import "particles/cursor";
 @import "particles/range";
+@import "particles/clock";
+@import "particles/cookies";
+@import "particles/scroll-to-top";
 @import "particles/test";
-
 
 
 // media

@@ -2,6 +2,26 @@
 @import "../theme/theme";
 
 .form {
+  &_header {
+    font-family: $font-family-oswald;
+    font-weight: 600;
+    color: $greyE2;
+    font-size: 54px;
+    line-height: 65px;
+    padding: 0 0 15px 0;
+  }
+
+  &_half {
+    overflow: hidden;
+    .form_input {
+      width: calc(50% - 29px);
+      float: left;
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+
   &_buttons {
     display: flex;
     flex-flow: row nowrap;
@@ -17,7 +37,7 @@
     color: #b4b4b4;
     font-size: 16px;
     font-weight: 900;
-    font-family: $font-family-lato;
+    font-family: $font-family-roboto;
     &:after{
       $size: 11px;
       content: '';
@@ -53,5 +73,25 @@
     }
   }
 }
+
+.md-modal-form {
+  max-width: 100% !important;
+  min-width: 100% !important;
+  max-height: 100% !important;
+
+  .md-close {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    top: -30px;
+    right: 30px
+  }
+}
+
+.md-overlay {
+  background: url("/assets/img/bgc/contact_us_pop-up_bg.jpg") center no-repeat $black !important;
+}
+
 
 

@@ -17,15 +17,32 @@ $themes: (
     linkColor: $black17,
     animationBgc: $black,
     arrowBgc: url("/assets/img/icons/arrow_link_black.svg") center no-repeat transparent,
+
+    rangeColorActive: $grey30,
+    rangeColor: $greyb8,
+
+    rangeElmBgcActive: $grey30,
+    rangeElmBgc: $greyb8,
+
+    rangeBgArrow: url("/assets/img/icons/arrow_slider_black.svg") center/contain no-repeat transparent
   ),
   dark: (
     backgroundColor: $black,
     sectionTextColor: $grey40_invert,
-    textColor: $grey_invert,
-    headerTextColor: $black17_invert,
+    textColor: $grey8c,
+    headerTextColor: $greyE2,
     linkColor: $greyCC_invert,
     animationBgc: $white,
     arrowBgc: url("/assets/img/icons/arrow_link_grey.svg") center no-repeat transparent,
+
+
+    rangeColorActive: $greyE2,
+    rangeColor: $grey62,
+
+    rangeElmBgcActive: $greyE2,
+    rangeElmBgc: $grey62,
+
+    rangeBgArrow: url("/assets/img/icons/arrow_slider_white.svg") center/contain no-repeat transparent
   ),
 );
 

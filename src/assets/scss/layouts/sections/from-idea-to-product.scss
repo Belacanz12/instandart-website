@@ -1,0 +1,64 @@
+@import "../../utils/vars";
+
+.product-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &_img{
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_number {
+    font-family: $font-family-oswald;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 66px;
+    position: absolute;
+    bottom: -15px;
+    right: 28px;
+  }
+
+  .page_right_content {
+    padding-right: 2*$containerLeftWidth/8
+  }
+
+  .text {
+    &_header {
+      max-width: 250px
+    }
+  }
+
+  .tab_item {
+    padding: 0 0 0 25px;
+    max-width: 340px;
+  }
+
+  .text {
+    &_header {
+      font-size: 60px;
+      line-height: 68px;
+      letter-spacing: -0.2px;
+      margin: 0 0 50px 0;
+    }
+
+    &_body {
+      margin: 0 100px 28px 0;
+      line-height: 32px;
+    }
+  }
+}
+
+.range-slider {
+  &--product {
+    position: absolute !important;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: calc(50% - #{$containerWidth}/2);
+  }
+}
