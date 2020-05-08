@@ -270,7 +270,7 @@ h6, .h6 {
 
     &:after, &:before {
       transform: translate(-50%, -50%) rotate(90deg);
-      mask: url("/assets/img/icons/arrow_link_black.svg") no-repeat;
+      mask: url("/assets/img/icon/arrow_link_black.svg") no-repeat;
       background-color: $yellow;
       transition: top .5s ease;
     }
@@ -308,7 +308,7 @@ h6, .h6 {
     transform: translate(-50%, -50%);
     width: 22px;
     height: 14px;
-    background: url("/assets/img/icons/arrow_link_black.svg") center no-repeat transparent;
+    background: url("/assets/img/icon/arrow_link_black.svg") center no-repeat transparent;
     transition: left .5s ease;
   }
 
