@@ -1,6 +1,21 @@
 .page {
-  .page_right_content {
-    //padding-right: 2*$containerRightWidth/8;
+  &--good-in {
+    .page_right_content {
+      //padding-right: 2*$containerRightWidth/8;
+    }
+
+    .text {
+      margin-left: 35px;
+
+      &_header {
+        font-size: 64px;
+        letter-spacing: -0.5px;
+        margin: 0 0 55px;
+      }
+
+      &_body {
+      }
+    }
   }
 }
 

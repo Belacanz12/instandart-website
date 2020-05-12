@@ -1,6 +1,6 @@
 @import "../utils/vars";
 
-$footer-padding: 48px;
+$footer-padding: 38px;
 $footer-item-padding: 26px;
 
 .page {
@@ -20,11 +20,17 @@ $footer-item-padding: 26px;
 
 .footer {
   &-logo {
-    padding: $footer-padding 0 0 0;
+    padding: 48px 0 0 0;
+    margin-left: 12px;
+    svg {
+      width: 172px;
+      height: 37px;
+    }
   }
 
   &-nav {
     padding: $footer-padding 0 0 0;
+    margin-right: 28px;
 
     &_item {
     }
@@ -62,6 +68,7 @@ $footer-item-padding: 26px;
   &-address {
     color: $grey8c;
     padding: $footer-padding 0 0 0;
+    margin-right: 27px;
 
     &_item {
       font-size: 16px;
@@ -72,10 +79,12 @@ $footer-item-padding: 26px;
   }
 
   &-socials {
-    padding: $footer-padding 0 0 0;
+    padding: 48px 0 0 0;
+    margin-right: 33px;
 
     &_item {
       line-height: 36px;
+      margin-bottom: 5px;
     }
   }
 }
@@ -86,6 +95,10 @@ $footer-item-padding: 26px;
   font-size: 14px;
   font-family: $font-family-lato;
   font-weight: 700;
+}
+
+.brand-logo {
+  display: block;
 }
 
 

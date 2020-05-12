@@ -40,8 +40,8 @@ $containerRightMaxWidth: calc(2*1280px/3);
  */
 
 $black:   #0a0a0a;
-$black17: #171717;
 $black15: #151515;
+$black17: #171717;
 $grey42:  #424242;
 $black47: #474747;
 $grey:    #343434;
@@ -51,18 +51,18 @@ $grey28:  #282828;
 $greyE2:  #e2e2e2;
 $greyEA:  #eaeaea;
 $greyb8:  #b8b8b8;
+$grey8a:  #8a8a8a;
+$grey8c:  #8c8c8c;
 $grey62:  #626262;
 $grey6a:  #6a6a6a;
-$grey8c:  #8c8c8c;
-$grey8a:  #8a8a8a;
 $yellow:  #ffe462;
-$white: #fff;
+$white:   #fff;
 
-$black17_invert: #eaeaea;
-$grey_invert: #8a8a8a;
-$greyCC_invert: #ccc;
-$greyDF_invert: #dfdfdf;
-$grey40_invert: #404040;
+$black17_invert:  #eaeaea;
+$grey_invert:     #8a8a8a;
+$greyCC_invert:   #ccc;
+$greyDF_invert:   #dfdfdf;
+$grey40_invert:   #404040;
 
 // Sizes
 $base-font-size: 16px;
@@ -72,9 +72,9 @@ $base-border-radius: 6px;
 // Fonts
 // -------------------------------
 $font-size: 18px;
-$font-family-lato: 'Lato', sans-serif;
-$font-family-roboto: 'Roboto', sans-serif;
-$font-family-oswald: 'Oswald', sans-serif;
+$font-family-lato:    'Lato', sans-serif;
+$font-family-roboto:  'Roboto', sans-serif;
+$font-family-oswald:  'Oswald', sans-serif;
 
 $oswaldMedium:    500;
 $oswaldSemiBold:  600;
