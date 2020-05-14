@@ -1,30 +1,25 @@
 // Grid
-$sm-screen-min: 320;
-$md-screen-min: 768;
-$lg-screen-min: 1024;
-$xl-screen-min: 1400;
 
-$mobile-viewport: "(max-width: #{$lg-screen-min - 1}px)";
-$sm-viewport: "only screen and (min-width: #{$sm-screen-min}px)";
-$md-viewport: "only screen and (min-width: #{$md-screen-min}px)";
-$lg-viewport: "only screen and (min-width: #{$lg-screen-min}px)";
-$xl-viewport: "only screen and (min-width: #{$xl-screen-min}px)";
+$screen-320-min: 320;
+$screen-480-min: 480;
+$screen-600-min: 600;
+$screen-750-min: 750;
+$screen-970-min: 970;
+$screen-1280-min: 1280;
+
+$mobile-viewport: "(max-width: #{$screen-970-min - 1}px)";
+$viewport-320: "only screen and (min-width: #{$screen-320-min}px)";
+$viewport-480: "only screen and (min-width: #{$screen-480-min}px)";
+$viewport-600: "only screen and (min-width: #{$screen-600-min}px)";
+$viewport-750: "only screen and (min-width: #{$screen-750-min}px)";
+$viewport-970: "only screen and (min-width: #{$screen-970-min}px)";
+$viewport-1280: "only screen and (min-width: #{$screen-1280-min}px)";
 
 $gutter-width: 18px;
 $gutter-width-middle: 28px;
 $mobile-gutter-reduce: 8px;
 $half-gutter-width: $gutter-width * 0.5;
 $gutter-compensation: ($gutter-width * 0.5) * -1;
-
-$grid-columns: 12;
-
-$containerWidth: 70%;
-
-$containerLeftWidth: 2*100%*$containerWidth/(300% - $containerWidth);
-$containerRightWidth: 4*100%*$containerWidth/(300% + $containerWidth);
-
-$containerLeftMaxWidth: calc(1280px/3);
-$containerRightMaxWidth: calc(2*1280px/3);
 
 // Colors
 
@@ -51,12 +46,14 @@ $grey28:  #282828;
 $greyE2:  #e2e2e2;
 $greyEA:  #eaeaea;
 $greyb8:  #b8b8b8;
+$grey84:  #848484;
 $grey8a:  #8a8a8a;
 $grey8c:  #8c8c8c;
 $grey62:  #626262;
 $grey6a:  #6a6a6a;
 $yellow:  #ffe462;
 $white:   #fff;
+$red:     #ff5a5a;
 
 $black17_invert:  #eaeaea;
 $grey_invert:     #8a8a8a;
@@ -81,7 +78,7 @@ $oswaldSemiBold:  600;
 
 $robotoRegular:   400;
 $robotoMedium:    500;
-$RobotoBold:      700;
+$robotoBold:      700;
 
 // -------------------------------
 

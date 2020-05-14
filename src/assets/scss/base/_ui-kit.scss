@@ -189,12 +189,11 @@ h6, .h6 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding: 0 18px;
 
   &_left {
     text-transform: uppercase;
     font-family: $font-family-roboto;
-    font-weight: $robotoMedium;
+    font-weight: $robotoBold;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 2px;
@@ -399,7 +398,11 @@ h6, .h6 {
     cursor: pointer;
     transition: all .5s ease;
 
-    &:hover, &.active {
+    &:hover{
+      color: $yellow;
+    }
+
+    &.active {
       border-left-color: $yellow;
       color: $yellow;
     }
@@ -418,4 +421,13 @@ h6, .h6 {
       display: block
     }
   }
+}
+
+#width33-header {
+  position: absolute;
+  width: 1px;
+  visibility: hidden;
+  top: 0;
+  bottom: 0;
+  left: calc(100%/3) ;
 }

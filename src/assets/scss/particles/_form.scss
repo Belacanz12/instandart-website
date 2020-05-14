@@ -25,6 +25,21 @@
     }
   }
 
+  .md-modal-form & {
+    .form_buttons {
+      overflow: hidden;
+      display: block;
+    }
+
+    .form_reset {
+      float: left;
+    }
+
+    .form_submit {
+      float: right;
+    }
+  }
+
   &_buttons {
     display: flex;
     flex-flow: row nowrap;
@@ -73,8 +88,18 @@
   .input-field {
     input, textarea {
       font-size: 1.2rem !important;
-      @include themify($themes) {
-        color: themed('textColor')
+      color: $greyEA;
+    }
+    label {
+      color: $grey84;
+      &.active {
+        color: $grey84 !important;
+      }
+    }
+
+    .helper-text {
+      &:after {
+        color: $red;
       }
     }
   }

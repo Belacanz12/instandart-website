@@ -4,7 +4,7 @@
 .portfolio-slider{
   &_item {
     .page_right_content {
-      padding-right: 2*$containerRightWidth/8;
+
     }
 
     .text {
@@ -49,6 +49,5 @@
     margin: auto;
     top: 0;
     bottom: 0;
-    right: calc(50% - #{$containerWidth}/2);
   }
 }

@@ -9,3 +9,4 @@ import './cookies';
 import './modal';
 import './scroll-to-top';
 import './modalEffects';
+import './resizeHandler';

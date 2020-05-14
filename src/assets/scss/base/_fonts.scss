@@ -13,7 +13,7 @@ $SemiBold: "family=Oswald:wght@500;600";
 // Roboto Medium  500
 // Roboto Bold    700
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&#{$SemiBold}&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?#{$SemiBold}&family=Roboto:wght@400;500;700&display=swap');
 
 /* fallback */
 @font-face {

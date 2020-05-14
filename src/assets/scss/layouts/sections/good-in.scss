@@ -20,16 +20,30 @@
 }
 
 .technology {
-  height: 300px;
+  height: 467px;
+
+  &_item {
+    width: 33%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+
+    img {
+      filter: grayscale(100%);
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+      width: 50px;
+      @extend .transition;
+
+      &:hover {
+        filter: grayscale(0%)
+      }
+    }
+  }
 
   .simplebar-content {
     display: flex;
     flex-flow: row wrap;
-
-    .technology_item {
-      flex-grow: 1;
-      width: 33%;
-    }
   }
 
   .simplebar-track.simplebar-vertical {

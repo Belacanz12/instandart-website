@@ -1,31 +1,16 @@
 @import './sections/banner';
 @import './sections/company';
 @import './sections/services';
-@import './sections/from-idea-to-product';
+@import 'sections/idea-to-product';
 @import './sections/industry';
 @import './sections/portfolio';
 @import './sections/good-in';
 @import './sections/contacts';
 
-$containerWidth: 70%;
-$containerLeftWidth: 2*100%*$containerWidth/(300% - $containerWidth);
-$containerRightWidth: 4*100%*$containerWidth/(300% + $containerWidth);
-
-$containerLeftMaxWidth: calc(1280px/3);
-$containerRightMaxWidth: calc(2*1280px/3);
-
-//$colRightWidth: $containerWidth*100%/(2*(300% - $containerWidth));
-//$colRightMaxWidth: calc(1280px/12);
-
-.container {
-  position: relative;
-}
-
 .page {
   display: flex;
   flex-flow: row nowrap;
   height: 970px;
-  color: $containerWidth;
   position: relative;
 
   &_wrapper {
@@ -38,7 +23,6 @@ $containerRightMaxWidth: calc(2*1280px/3);
     display: flex;
     flex-flow: row nowrap;
     height: 970px;
-    color: $containerWidth;
     position: relative;
   }
 
@@ -53,9 +37,6 @@ $containerRightMaxWidth: calc(2*1280px/3);
       background: url("/assets/img/bgc/bg_services_1.jpg") center no-repeat transparent;
     }
 
-    .page_right_content {
-      padding-right: $containerLeftWidth/8
-    }
   }
 
   &--company {
@@ -96,11 +77,9 @@ $containerRightMaxWidth: calc(2*1280px/3);
 
   &_left {
     justify-content: flex-end;
-    width: calc(50% - #{$containerWidth}/6 + #{$gutter-width-middle}/2);
   }
 
   &_right {
-    width: calc(50% + #{$containerWidth}/6 - #{$gutter-width-middle}/2);
   }
 
   &_left, &_right {
@@ -110,13 +89,10 @@ $containerRightMaxWidth: calc(2*1280px/3);
   }
 
   &_left_content {
-    width: $containerLeftWidth;
-    max-width: $containerLeftMaxWidth;
+
   }
 
   &_right_content {
-    width: $containerRightWidth;
-    max-width: $containerRightMaxWidth;
-    padding-left: $containerRightWidth/8;
+
   }
 }
