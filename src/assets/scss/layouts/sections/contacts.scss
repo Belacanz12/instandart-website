@@ -1,3 +1,38 @@
+.page {
+  &--contacts {
+    .page_right {
+      background: url("/assets/img/bgc/bg_contact_us.jpg") center no-repeat transparent;
+    }
+
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+
+      }
+
+      @media #{$viewport-600} {
+
+      }
+
+      @media #{$viewport-750} {
+        height: 703px;
+      }
+
+      @media #{$viewport-970} {
+        height: 688px;
+      }
+
+      @media #{$viewport-1280} {
+
+      }
+    }
+  }
+}
+
 .contacts{
   margin-left: 35px;
 
@@ -58,4 +93,28 @@
       background: url("/assets/img/icon/ukraine_flag.svg") center no-repeat transparent;
     }
   }
+}
+
+@media #{$viewport-320} {
+
+}
+
+@media #{$viewport-480} {
+
+}
+
+@media #{$viewport-600} {
+
+}
+
+@media #{$viewport-750} {
+
+}
+
+@media #{$viewport-970} {
+
+}
+
+@media #{$viewport-1280} {
+
 }

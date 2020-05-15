@@ -110,15 +110,15 @@ $(document).ready(function () {
     setupEvents: function(){
       const _ = this;
 
-      _.banner.on('beforeChange', function(){
+      _.banner.on('afterChange', function(){
         $('.range-slider--banner').trigger('slick-next');
       });
 
-      _.product.on('beforeChange', function(){
+      _.product.on('afterChange', function(){
         $('.range-slider--product').trigger('slick-next');
       });
 
-      _.portfolio.on('beforeChange', function(){
+      _.portfolio.on('afterChange', function(){
         $('.range-slider--portfolio').trigger('slick-next');
       });
     },

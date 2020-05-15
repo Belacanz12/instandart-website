@@ -6,11 +6,24 @@
     font-family: $font-family-oswald;
     font-weight: 600;
     color: $greyE2;
-    font-size: 54px;
+    font-size: 50px;
     line-height: 65px;
     letter-spacing: -1px;
     padding: 0 0 15px 0;
     margin-bottom: 40px;
+
+    @media #{$viewport-320} {
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    @media #{$viewport-600} {
+      font-size: 50px;
+    }
+
+    @media #{$viewport-1280} {
+      font-size: 54px;
+    }
   }
 
   &_half {

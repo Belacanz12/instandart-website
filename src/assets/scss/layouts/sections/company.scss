@@ -2,13 +2,40 @@
 
 .page {
   &--company {
+
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+
+      }
+
+      @media #{$viewport-600} {
+
+      }
+
+      @media #{$viewport-750} {
+        height: 633px;
+      }
+
+      @media #{$viewport-970} {
+        height: 708px;
+      }
+
+      @media #{$viewport-1280} {
+
+      }
+    }
+
+
+
     .text {
       padding-left: 28px;
 
       &_header {
-        font-size: 60px;
-        line-height: 68px;
-        letter-spacing: -0.5px;
         margin: 0 0 55px;
       }
 
@@ -33,6 +60,32 @@
     min-width: 320px;
     margin-bottom: 105px;
 
+    @media #{$viewport-320} {
+
+    }
+
+    @media #{$viewport-480} {
+
+    }
+
+    @media #{$viewport-600} {
+
+    }
+
+    @media #{$viewport-750} {
+
+    }
+
+    @media #{$viewport-970} {
+      min-width: 235px;
+      margin-bottom: 85px;
+    }
+
+    @media #{$viewport-1280} {
+      min-width: 320px;
+      margin-bottom: 105px;
+    }
+
     &:last-child, &:nth-last-of-type(2){
       margin-bottom: 0;
     }
@@ -42,17 +95,89 @@
       font-weight: $oswaldMedium;
       color: $black17;
       margin-bottom: 30px;
+
+      @media #{$viewport-320} {
+        font-size: 48px;
+      }
+
+      @media #{$viewport-480} {
+        font-size: 62px;
+      }
+
+      @media #{$viewport-600} {
+        font-size: 62px;
+      }
+
+      @media #{$viewport-750} {
+        font-size: 62px;
+      }
+
+      @media #{$viewport-970} {
+        font-size: 72px;
+      }
+
+      @media #{$viewport-1280} {
+        font-size: 82px;
+      }
+
       span {
-        font-size: 65px;
+        font-size: 48px;
+
+        @media #{$viewport-480} {
+          font-size: 65px;
+        }
       }
     }
 
     &_text {
-      font-size: 22px;
+      font-size: 16px;
+      line-height: 20px;
       font-weight: 500;
       width: 150px;
-      line-height: 28px;
       color: $black47;
+
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @media #{$viewport-970} {
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      @media #{$viewport-1280} {
+        font-size: 22px;
+        line-height: 28px;
+      }
     }
   }
+}
+
+@media #{$viewport-320} {
+
+}
+
+@media #{$viewport-480} {
+
+}
+
+@media #{$viewport-600} {
+
+}
+
+@media #{$viewport-750} {
+
+}
+
+@media #{$viewport-970} {
+
+}
+
+@media #{$viewport-1280} {
+
 }

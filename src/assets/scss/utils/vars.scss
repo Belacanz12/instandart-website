@@ -7,7 +7,7 @@ $screen-750-min: 750;
 $screen-970-min: 970;
 $screen-1280-min: 1280;
 
-$mobile-viewport: "(max-width: #{$screen-970-min - 1}px)";
+$mobile-viewport: "(max-width: #{$screen-600-min - 1}px)";
 $viewport-320: "only screen and (min-width: #{$screen-320-min}px)";
 $viewport-480: "only screen and (min-width: #{$screen-480-min}px)";
 $viewport-600: "only screen and (min-width: #{$screen-600-min}px)";

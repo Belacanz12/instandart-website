@@ -5,10 +5,18 @@ $footer-item-padding: 26px;
 
 .page {
   &--footer {
+    height: 235px !important;
+    border: 1px solid $grey27;
+
+    @media #{$viewport-1280} {
+
+    }
+
     .page_left,
     .page_right {
       align-items: flex-start;
     }
+
     .page_left_content,
     .page_right_content {
       display: flex;
@@ -22,15 +30,30 @@ $footer-item-padding: 26px;
   &-logo {
     padding: 48px 0 0 0;
     margin-left: 12px;
+
+    @media #{$viewport-970} {
+      padding: 54px 0 0;
+      margin-left: 0;
+    }
+
     svg {
       width: 172px;
       height: 37px;
+
+      @media #{$viewport-970} {
+        width: 144px;
+      }
     }
   }
 
   &-nav {
     padding: $footer-padding 0 0 0;
     margin-right: 28px;
+
+    @media #{$viewport-970} {
+      padding: 50px 0 0;
+      margin-right: 0;
+    }
 
     &_item {
     }
@@ -52,6 +75,10 @@ $footer-item-padding: 26px;
   &-links {
     padding: $footer-padding 0 0 0;
 
+    @media #{$viewport-970} {
+      padding: 50px 0 0;
+    }
+
     .link {
       font-size: 16px;
       font-family: $font-family-roboto;
@@ -70,6 +97,11 @@ $footer-item-padding: 26px;
     padding: $footer-padding 0 0 0;
     margin-right: 27px;
 
+    @media #{$viewport-970} {
+      padding: 50px 0 0;
+      margin-right: -13px;
+    }
+
     &_item {
       font-size: 16px;
       font-family: $font-family-roboto;
@@ -81,6 +113,11 @@ $footer-item-padding: 26px;
   &-socials {
     padding: 48px 0 0 0;
     margin-right: 33px;
+
+    @media #{$viewport-970} {
+      padding: 54px 0 0;
+      margin-right: 25px;
+    }
 
     &_item {
       line-height: 36px;
@@ -99,13 +136,4 @@ $footer-item-padding: 26px;
 
 .brand-logo {
   display: block;
-}
-
-
-@media only screen and (max-width: 600px) {
-
-}
-
-@media only screen and (max-width: 320px) {
-
 }

@@ -1,1 +1,60 @@
 @import "../../utils/vars";
+
+.page {
+  &--industry {
+    .page_right {
+      background: url("/assets/img/bgc/bg_services_1.jpg") center no-repeat transparent;
+    }
+
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+
+      }
+
+      @media #{$viewport-600} {
+
+      }
+
+      @media #{$viewport-750} {
+        height: 611px;
+      }
+
+      @media #{$viewport-970} {
+        height: 681px;
+      }
+
+      @media #{$viewport-1280} {
+
+      }
+    }
+  }
+}
+
+@media #{$viewport-320} {
+
+}
+
+@media #{$viewport-480} {
+
+}
+
+@media #{$viewport-600} {
+
+}
+
+@media #{$viewport-750} {
+
+}
+
+@media #{$viewport-970} {
+
+}
+
+@media #{$viewport-1280} {
+
+}

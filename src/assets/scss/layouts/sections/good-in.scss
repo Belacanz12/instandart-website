@@ -1,5 +1,33 @@
 .page {
   &--good-in {
+
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+
+      }
+
+      @media #{$viewport-600} {
+
+      }
+
+      @media #{$viewport-750} {
+        height: 568px;
+      }
+
+      @media #{$viewport-970} {
+        height: 622px;
+      }
+
+      @media #{$viewport-1280} {
+
+      }
+    }
+
     .page_right_content {
       //padding-right: 2*$containerRightWidth/8;
     }
@@ -7,9 +35,12 @@
     .text {
       margin-left: 35px;
 
+      @media #{$viewport-970} {
+        margin-left: 27px;
+      }
+
+
       &_header {
-        font-size: 64px;
-        letter-spacing: -0.5px;
         margin: 0 0 55px;
       }
 
@@ -22,23 +53,61 @@
 .technology {
   height: 467px;
 
+  @media #{$viewport-320} {
+
+  }
+
+  @media #{$viewport-480} {
+
+  }
+
+  @media #{$viewport-600} {
+
+  }
+
+  @media #{$viewport-750} {
+
+  }
+
+  @media #{$viewport-970} {
+    margin-right: 14px;
+  }
+
+  @media #{$viewport-1280} {
+
+  }
+
   &_item {
     width: 33%;
     flex-grow: 1;
     margin-bottom: 20px;
+  }
 
-    img {
-      filter: grayscale(100%);
-      display: block;
-      margin: 0 auto;
-      cursor: pointer;
-      width: 50px;
-      @extend .transition;
+  &_img {
+    filter: grayscale(100%);
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 50px;
+    @extend .transition;
 
-      &:hover {
-        filter: grayscale(0%)
+    &:hover {
+      filter: grayscale(0%)
+    }
+
+    &:hover {
+      & + .technology_text {
+        opacity: 1;
       }
     }
+  }
+
+  &_text {
+    text-align: center;
+    font-size: 14px;
+    color: $grey6a;
+    opacity: 0;
+    @extend .transition;
   }
 
   .simplebar-content {
@@ -54,4 +123,28 @@
       background-color: #161616;
     }
   }
+}
+
+@media #{$viewport-320} {
+
+}
+
+@media #{$viewport-480} {
+
+}
+
+@media #{$viewport-600} {
+
+}
+
+@media #{$viewport-750} {
+
+}
+
+@media #{$viewport-970} {
+
+}
+
+@media #{$viewport-1280} {
+
 }

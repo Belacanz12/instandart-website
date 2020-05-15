@@ -1,5 +1,5 @@
 @import "../../utils/vars";
-$height: 88px;
+$height: 60px;
 
 header {
   position: relative;
@@ -44,5 +44,47 @@ header {
 
   li {
     line-height: $height;
+  }
+}
+
+@media #{$viewport-970} {
+  $height: 72px;
+
+  header {
+    height: $height !important;
+
+    .brand-logo {
+      svg {
+        width: 144px;
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+    li {
+      line-height: $height;
+    }
+
+    nav {
+      height: $height !important;
+      .active-item {
+        margin-right: -12px;
+      }
+    }
+  }
+}
+
+@media #{$viewport-1280} {
+  $height: 88px;
+
+  header {
+    height: $height !important;
+
+    li {
+      line-height: $height;
+    }
+
+    nav {
+      height: $height !important;
+    }
   }
 }

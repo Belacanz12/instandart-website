@@ -1,5 +1,37 @@
 @import "../../utils/vars";
 
+.page {
+  &--idea-to-product {
+
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+
+      }
+
+      @media #{$viewport-600} {
+
+      }
+
+      @media #{$viewport-750} {
+        height: 604px;
+      }
+
+      @media #{$viewport-970} {
+        height: 653px;
+      }
+
+      @media #{$viewport-1280} {
+
+      }
+    }
+  }
+}
+
 .product-slider {
   position: relative;
   overflow: hidden;
@@ -7,25 +39,73 @@
 
   &_img{
     position: relative;
+    //max-height: 355px;
     img {
       width: 100%;
       height: auto;
+      @media #{$viewport-970} {
+        max-height: 425px;
+      }
+
+      @media #{$viewport-1280} {
+        max-height: initial;
+      }
     }
   }
 
   &_number {
     font-family: $font-family-oswald;
     font-weight: 600;
-    font-size: 56px;
+    font-size: 30px;
     line-height: 66px;
     position: absolute;
     bottom: -15px;
     right: 28px;
+
+    @media #{$viewport-480} {
+      font-size: 40px;
+    }
+
+    @media #{$viewport-750} {
+      font-size: 46px;
+    }
+
+    @media #{$viewport-970} {
+      font-size: 56px;
+    }
   }
 
   .text {
     &_header {
       max-width: 250px
+    }
+
+    &_body {
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+
+      }
+
+      @media #{$viewport-600} {
+
+      }
+
+      @media #{$viewport-750} {
+        &:last-of-type {
+          display: none;
+        }
+      }
+
+      @media #{$viewport-970} {
+
+      }
+
+      @media #{$viewport-1280} {
+
+      }
     }
   }
 

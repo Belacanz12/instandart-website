@@ -1,23 +1,40 @@
 @import "../../utils/vars";
 
+
 .page {
   &--banner {
     border-top: 1px solid $grey28;
-    .text {
-      &_header {
-        font-size: 90px;
-        line-height: 105px;
-      }
-
-      &_body {
-        font-size: 20px;
-        line-height: 36px;
-      }
-    }
-
     .row {
       margin-bottom: 0;
     }
+
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+
+      }
+
+      @media #{$viewport-600} {
+
+      }
+
+      @media #{$viewport-750} {
+        height: 437px;
+      }
+
+      @media #{$viewport-970} {
+        height: 528px;
+      }
+
+      @media #{$viewport-1280} {
+        height: 878px;
+      }
+    }
+
   }
 }
 
@@ -26,11 +43,72 @@
     margin-left: 20px;
 
     &_header {
+      font-size: 90px;
+      line-height: 105px;
       text-transform: initial;
+
+      @media #{$viewport-320} {
+        font-size: 50px;
+        line-height: 60px;
+      }
+
+      @media #{$viewport-480} {
+        font-size: 74px;
+        line-height: 80px;
+      }
+
+      @media #{$viewport-750} {
+        font-size: 70px;
+        line-height: 80px;
+      }
+
+      @media #{$viewport-970} {
+        font-size: 80px;
+        line-height: 95px;
+      }
+
+      @media #{$viewport-1280} {
+        font-size: 90px;
+        line-height: 105px;
+      }
+    }
+
+    &_body {
+      font-size: 20px;
+      line-height: 36px;
+      display: none;
+      @media #{$viewport-1280} {
+        display: block;
+      }
     }
   }
 
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+
+
+@media #{$viewport-320} {
+
+}
+
+@media #{$viewport-480} {
+
+}
+
+@media #{$viewport-600} {
+
+}
+
+@media #{$viewport-750} {
+
+}
+
+@media #{$viewport-970} {
+
+}
+
+@media #{$viewport-1280} {
+
 }

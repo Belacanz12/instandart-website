@@ -1,7 +1,35 @@
 .page {
   &--services {
-    .page_title {
-      top: 90px;
+
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+
+      }
+
+      @media #{$viewport-480} {
+
+      }
+
+      @media #{$viewport-600} {
+
+      }
+
+      @media #{$viewport-750} {
+        height: 651px;
+      }
+
+      @media #{$viewport-970} {
+        height: 778px;
+      }
+
+      @media #{$viewport-1280} {
+
+      }
+    }
+
+    .page_right {
+      background: url("/assets/img/bgc/bg_services_1.jpg") center no-repeat transparent;
     }
   }
 }
@@ -18,14 +46,34 @@
 
   .text {
     &_header {
-      font-size: 54px;
-      line-height: 65px;
-      letter-spacing: -0.2px;
       margin: 0 0 50px 0;
     }
 
     &_body {
       margin: 0 100px 28px 0;
+
+      @media #{$viewport-320} {
+      }
+
+      @media #{$viewport-480} {
+      }
+
+      @media #{$viewport-600} {
+      }
+
+      @media #{$viewport-750} {
+        display: none;
+        &:first-of-type {
+          display: block;
+        }
+      }
+
+      @media #{$viewport-970} {
+
+      }
+
+      @media #{$viewport-1280} {
+      }
     }
   }
 
