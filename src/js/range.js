@@ -30,13 +30,15 @@
       parentWidth = $(element).width(),
       parentHeight = $(element).height(),
       // progress params
-      progressMax = parentHeight > parentWidth ? parentHeight : parentWidth;
+      progressMax = parentHeight > parentWidth ? parentHeight : parentWidth,
+      interval = null;
 
       _.foo = false;
       _.defaults = {
         currentSlide: 1,
         allSlide: 1,
         duration: 1000,
+        isRange: false,
         funcSlickNext: function() {},
         funcSlickPrev: function () {}
       }
@@ -81,8 +83,9 @@
           _.changeCurrentSlide(_.currentSlide);
         }
 
-        // запускаем сначала анимацию range element
-        _.animateFunc({duration: _.duration, draw: _.draw, timing: _.quad});
+
+        // запускаем таймер
+        _.runInterval();
 
         // передаем данные slick slider'y для изменения слайда
         typeof callback == 'function' ? callback() : null
@@ -108,28 +111,34 @@
           _.changeCurrentSlide(_.currentSlide);
         }
 
-        // запускаем сначала анимацию range element
-        _.animateFunc({duration: _.duration, draw: _.draw, timing: _.quad});
+        // запускаем таймер
+        _.runInterval();
 
         // передаем данные slick slider'y для изменения слайда
         typeof callback == 'function' ? callback() : null
       }
 
-      _.initEvents = function(){
-        arrowPrevElm.on('click', _.onClickPrevArrow.bind(this, _.funcSlickPrev));
-        arrowNextElm.on('click', _.onClickNextArrow.bind(this, _.funcSlickNext));
+      _.initEvents = function() {
+        arrowPrevElm.on('click', _.onClickPrevArrow.bind(this, _.funcSlickPrev.bind(this, _.currentSlide)));
+        arrowNextElm.on('click', _.onClickNextArrow.bind(this, _.funcSlickNext.bind(this, _.currentSlide)));
 
         $(element).on('slick-prev', _.onClickPrevArrow.bind(this, 'trigger'));
         $(element).on('slick-next', _.onClickNextArrow.bind(this, 'trigger'));
       }
 
+      _.runInterval = function(){
+        clearInterval(_.interval);
+        _.animateFunc({duration: _.duration, draw: _.draw, timing: _.quad});
+
+        _.interval = setInterval(function(){
+          _.onClickNextArrow(_.funcSlickNext.bind(_));
+        }, _.duration);
+      }
+
       _.init = function(){
         _.initEvents();
         _.changeAllSlide(_.allSlide);
-
-        // setTimeout(function(){
-          _.animateFunc({duration: _.duration, draw: _.draw, timing: _.quad});
-        // }, 100)
+        _.runInterval();
       }
 
       _.draw = function (progress) {

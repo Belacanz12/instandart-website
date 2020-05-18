@@ -8,10 +8,6 @@ $footer-item-padding: 26px;
     height: 235px !important;
     border: 1px solid $grey27;
 
-    @media #{$viewport-1280} {
-
-    }
-
     .page_left,
     .page_right {
       align-items: flex-start;
@@ -31,9 +27,19 @@ $footer-item-padding: 26px;
     padding: 48px 0 0 0;
     margin-left: 12px;
 
+    @media #{$viewport-750} {
+      display: none;
+    }
+
     @media #{$viewport-970} {
+      display: block;
       padding: 54px 0 0;
       margin-left: 0;
+    }
+
+    @media #{$viewport-1280} {
+      padding: 48px 0 0 0;
+      margin-left: 12px;
     }
 
     svg {
@@ -42,6 +48,11 @@ $footer-item-padding: 26px;
 
       @media #{$viewport-970} {
         width: 144px;
+      }
+
+      @media #{$viewport-1280} {
+        width: 172px;
+        height: 37px;
       }
     }
   }
@@ -53,6 +64,11 @@ $footer-item-padding: 26px;
     @media #{$viewport-970} {
       padding: 50px 0 0;
       margin-right: 0;
+    }
+
+    @media #{$viewport-1280} {
+      padding: $footer-padding 0 0 0;
+      margin-right: 28px;
     }
 
     &_item {
@@ -79,6 +95,10 @@ $footer-item-padding: 26px;
       padding: 50px 0 0;
     }
 
+    @media #{$viewport-1280} {
+      padding: $footer-padding 0 0 0;
+    }
+
     .link {
       font-size: 16px;
       font-family: $font-family-roboto;
@@ -97,9 +117,18 @@ $footer-item-padding: 26px;
     padding: $footer-padding 0 0 0;
     margin-right: 27px;
 
+    @media #{$viewport-750} {
+      margin-right: 0;
+    }
+
     @media #{$viewport-970} {
       padding: 50px 0 0;
       margin-right: -13px;
+    }
+
+    @media #{$viewport-1280} {
+      padding: $footer-padding 0 0 0;
+      margin-right: 27px;
     }
 
     &_item {
@@ -114,9 +143,18 @@ $footer-item-padding: 26px;
     padding: 48px 0 0 0;
     margin-right: 33px;
 
+    @media #{$viewport-750} {
+      margin-right: 18px;
+    }
+
     @media #{$viewport-970} {
       padding: 54px 0 0;
       margin-right: 25px;
+    }
+
+    @media #{$viewport-1280} {
+      padding: 48px 0 0 0;
+      margin-right: 33px;
     }
 
     &_item {

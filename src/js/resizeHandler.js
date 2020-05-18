@@ -23,9 +23,15 @@ $(document).ready(function(){
   function setRangeSliderPosition(elem, width) {
     const windowWidth = $(window).width();
 
-    windowWidth >= 1280 && elem.each(function(){
-      $(this).css('right', width + getKoef(windowWidth));
-    });
+    if(windowWidth >= 1300){
+      elem.each(function(){
+        $(this).css('right', width + getKoef(windowWidth))
+      })
+    }else if(windowWidth >= 1280) {
+      elem.each(function(){
+        $(this).css('right', 20)
+      })
+    }
   }
 
   $(window).on('resize', function(){

@@ -8,15 +8,15 @@
     &, .page_container,
     .page_content {
       @media #{$viewport-320} {
-
+        height: 678px;
       }
 
       @media #{$viewport-480} {
-
+        height: 820px;
       }
 
       @media #{$viewport-600} {
-
+        height: 765px;
       }
 
       @media #{$viewport-750} {

@@ -2,12 +2,35 @@ import $ from 'jquery';
 import 'slick-carousel';
 import './range';
 
+function patching(func) {
+  let prevSlide = [];
+
+  return function() {
+    // if (prevSlide.length === 0) {
+    //   prevSlide[0] = arguments[2];
+    //   prevSlide[1] = arguments[3];
+    // }
+    //
+    // if(prevSlide[0] === arguments[2] && prevSlide[1] === arguments[3]){
+    //   return false;
+    // }
+    //
+    // prevSlide[0] = arguments[2];
+    // prevSlide[1] = arguments[3];
+
+    console.log(arguments);
+
+    return func.apply(this, arguments);
+  }
+}
+
 $(document).ready(function () {
   const mediator = {
     banner: null,
     product: null,
     portfolio: null,
     range: null,
+    duration: 5000,
     bannerObject: null,
     productObject: null,
     portfolioObject: null,
@@ -17,7 +40,7 @@ $(document).ready(function () {
       _.banner = $(".banner-slider").slick({
         dots: false,
         infinite: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 5000,
         arrows: false,
         slidesToShow: 1,
@@ -29,7 +52,7 @@ $(document).ready(function () {
       _.product = $(".product-slider").slick({
         dots: false,
         infinite: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 5000,
         arrows: false,
         slidesToShow: 1,
@@ -41,7 +64,7 @@ $(document).ready(function () {
       _.portfolio = $(".portfolio-slider").slick({
         dots: false,
         infinite: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 5000,
         arrows: false,
         slidesToShow: 1,
@@ -52,7 +75,10 @@ $(document).ready(function () {
     },
 
     setupRange: function(){
-      const _ = this;
+      const _ = this,
+        width = $(window).width(),
+      serviceRange = $('.range-slider--services'),
+      industryRange = $('.range-slider--industry');
 
       if(!_.banner) return false;
       if(!_.product) return false;
@@ -91,6 +117,29 @@ $(document).ready(function () {
         }
       });
 
+      width <= 750 && serviceRange.rangeSlick({
+        allSlide: serviceRange.closest('.page').find('.tab-pane').length,
+        duration: _.duration,
+        isRange: true,
+        funcSlickNext: function() {
+          serviceRange.closest('.page').find('.tab').eq(this.currentSlide - 1).trigger('click');
+        },
+        funcSlickPrev: function () {
+          serviceRange.closest('.page').find('.tab').eq(this.currentSlide - 1).trigger('click');
+        }
+      });
+
+      width <= 750 && industryRange.rangeSlick({
+        allSlide: industryRange.closest('.page').find('.tab-pane').length,
+        duration: _.duration,
+        isRange: true,
+        funcSlickNext: function() {
+          industryRange.closest('.page').find('.tab').eq(this.currentSlide - 1).trigger('click');
+        },
+        funcSlickPrev: function () {
+          industryRange.closest('.page').find('.tab').eq(this.currentSlide - 1).trigger('click');
+        }
+      });
     },
     setupPreEvents: function(){
       const _ = this;
@@ -108,18 +157,28 @@ $(document).ready(function () {
       });
     },
     setupEvents: function(){
-      const _ = this;
+      const _ = this,
+        banner = $('.range-slider--banner'),
+        product = $('.range-slider--product'),
+        portfolio = $('.range-slider--portfolio');
 
-      _.banner.on('afterChange', function(){
-        $('.range-slider--banner').trigger('slick-next');
+      _.banner.on('swipe', function(event, slick, direction){
+        direction === 'left' ?
+          banner.trigger('slick-next') :
+          banner.trigger('slick-prev');
       });
 
-      _.product.on('afterChange', function(){
-        $('.range-slider--product').trigger('slick-next');
-      });
+      _.product.on('swipe', function(event, slick, direction){
+        direction === 'left' ?
+          product.trigger('slick-next') :
+          product.trigger('slick-prev');
+        }
+      );
 
-      _.portfolio.on('afterChange', function(){
-        $('.range-slider--portfolio').trigger('slick-next');
+      _.portfolio.on('swipe', function(event, slick, direction){
+        direction === 'left' ?
+          portfolio.trigger('slick-next') :
+          product.trigger('slick-prev');
       });
     },
     setup:function () {

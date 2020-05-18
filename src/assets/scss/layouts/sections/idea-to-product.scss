@@ -6,15 +6,15 @@
     &, .page_container,
     .page_content {
       @media #{$viewport-320} {
-
+        height: 897px;
       }
 
       @media #{$viewport-480} {
-
+        height: 480px;
       }
 
       @media #{$viewport-600} {
-
+        height: 645px;
       }
 
       @media #{$viewport-750} {
@@ -76,11 +76,25 @@
   }
 
   .text {
+    @media #{$viewport-750} {
+      max-width: 300px;
+      margin-left: 15px;
+    }
+
     &_header {
-      max-width: 250px
+      max-width: 250px;
+      margin: 0 0 50px 0;
+
+      @media #{$viewport-750} {
+        max-width: 300px;
+        margin: 0 0 35px 0;
+      }
     }
 
     &_body {
+      margin: 0 100px 28px 0;
+      line-height: 32px;
+
       @media #{$viewport-320} {
 
       }
@@ -94,6 +108,8 @@
       }
 
       @media #{$viewport-750} {
+        margin: 0 0 28px 0;
+
         &:last-of-type {
           display: none;
         }
@@ -114,19 +130,6 @@
     max-width: 340px;
   }
 
-  .text {
-    &_header {
-      font-size: 60px;
-      line-height: 68px;
-      letter-spacing: -1px;
-      margin: 0 0 50px 0;
-    }
-
-    &_body {
-      margin: 0 100px 28px 0;
-      line-height: 32px;
-    }
-  }
 }
 
 .range-slider {

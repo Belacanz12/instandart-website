@@ -2,19 +2,18 @@
 
 .page {
   &--company {
-
     &, .page_container,
     .page_content {
       @media #{$viewport-320} {
-
+        height: 827px;
       }
 
       @media #{$viewport-480} {
-
+        height: 847px;
       }
 
       @media #{$viewport-600} {
-
+        height: 830px;
       }
 
       @media #{$viewport-750} {
@@ -30,13 +29,20 @@
       }
     }
 
-
-
     .text {
       padding-left: 28px;
 
+      @media #{$viewport-750} {
+        padding-left: 0;
+        max-width: 300px;
+      }
+
       &_header {
         margin: 0 0 55px;
+
+        @media #{$viewport-750} {
+          margin: 0 0 40px;
+        }
       }
 
       &_body {
@@ -46,6 +52,10 @@
 
     .rounded-link {
       margin-top: 50px;
+
+      @media #{$viewport-750} {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -73,7 +83,8 @@
     }
 
     @media #{$viewport-750} {
-
+      min-width: 100px;
+      margin-bottom: 80px;
     }
 
     @media #{$viewport-970} {
