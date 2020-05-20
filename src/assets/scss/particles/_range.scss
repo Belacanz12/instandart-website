@@ -71,6 +71,19 @@
     top: calc(100% + 15px);
     left: -7px;
   }
+
+  &--horizontal {
+    transform: rotate(-90deg);
+    //transform-origin: top;
+
+    .range-slider_current-slide-number {
+      transform: rotate(90deg);
+    }
+
+    .range-slider_all-slide-number {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 @media #{$viewport-320} {

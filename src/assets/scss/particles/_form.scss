@@ -15,6 +15,7 @@
     @media #{$viewport-320} {
       font-size: 40px;
       line-height: 45px;
+      margin-bottom: 20px;
     }
 
     @media #{$viewport-600} {
@@ -29,11 +30,23 @@
   &_half {
     overflow: hidden;
     margin-bottom: 0;
+
     .form_input {
       width: calc(50% - 29px);
       float: left;
+
       &:last-child {
         float: right;
+      }
+
+      @media #{$viewport-320} {
+        width: 100%;
+        float: none;
+      }
+
+      @media #{$viewport-600} {
+        width: calc(50% - 13px);
+        float: left;
       }
     }
   }
@@ -57,9 +70,18 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+
+    @media #{$viewport-320} {
+      flex-flow: column nowrap;
+    }
+
+    @media #{$viewport-480} {
+      flex-flow: row nowrap;
+    }
   }
 
   &_reset {
+    width: 100px;
     background-color: transparent;
     outline: none;
     border: none;
@@ -80,14 +102,31 @@
       right: 0;
       background: no-repeat url("/assets/img/icon/cross_small.svg") transparent;
     }
+
+    @media #{$viewport-320} {
+      margin: 20px 0;
+    }
+
+    @media #{$viewport-480} {
+      margin: 0 0 0 10px;
+    }
   }
 
   &_submit {
+    width: 165px;
     margin-right: 45px;
     background-color: transparent;
     outline: none;
     border: none;
     font-size: 22px;
+
+    @media #{$viewport-320} {
+      margin-right: 0;
+    }
+
+    @media #{$viewport-1280} {
+      margin-right: 45px;
+    }
   }
 
   &_helper-text {
@@ -99,6 +138,11 @@
   }
 
   .input-field {
+
+    @media #{$viewport-320} {
+      margin-bottom: 0;
+    }
+
     input, textarea {
       font-size: 1.2rem !important;
       color: $greyEA;
@@ -115,6 +159,12 @@
         color: $red;
       }
     }
+  }
+
+  @media #{$viewport-320} {
+   .row {
+     margin: 0;
+   }
   }
 }
 

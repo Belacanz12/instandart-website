@@ -12,7 +12,7 @@
       }
 
       @media #{$viewport-480} {
-        height: 820px;
+        height: 822px;
       }
 
       @media #{$viewport-600} {
@@ -36,12 +36,12 @@
 
 .portfolio-slider{
   &_item {
-    .page_right_content {
-
-    }
-
     .text {
       margin-left: 35px;
+
+      @media #{$viewport-320} {
+        margin-left: 0;
+      }
       &_header {
         margin: 0 0 55px;
 
@@ -83,10 +83,33 @@
     display: block;
     max-width: 500px;
 
+    @media #{$viewport-320} {
+      margin-bottom: 28px;
+    }
+
     img {
       width: 100%;
       height: auto;
+      @media #{$viewport-320} {
+        max-height: 234px;
+      }
+
+      @media #{$viewport-480} {
+        max-height: 340px;
+      }
+
+      @media #{$viewport-600} {
+        max-width: 394px;
+        max-height: 340px;
+      }
+
+      @media #{$viewport-750} {
+        max-width: initial;
+        max-height: initial;
+      }
+
       @media #{$viewport-970} {
+        max-height: initial;
         width: 445px;
       }
 
@@ -113,6 +136,21 @@
     margin: auto;
     top: 0;
     bottom: 0;
+
+    @media #{$viewport-320} {
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: -15px;
+    }
+
+    @media #{$viewport-600} {
+      margin: auto;
+      left: initial;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+    }
   }
 }
 

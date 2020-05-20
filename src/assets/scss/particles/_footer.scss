@@ -5,8 +5,15 @@ $footer-item-padding: 26px;
 
 .page {
   &--footer {
-    height: 235px !important;
     border: 1px solid $grey27;
+
+    @media #{$viewport-320} {
+      height: auto;
+    }
+
+    @media #{$viewport-750} {
+      height: 235px !important;
+    }
 
     .page_left,
     .page_right {
@@ -27,8 +34,12 @@ $footer-item-padding: 26px;
     padding: 48px 0 0 0;
     margin-left: 12px;
 
-    @media #{$viewport-750} {
+    @media #{$viewport-320} {
       display: none;
+    }
+
+    @media #{$viewport-750} {
+
     }
 
     @media #{$viewport-970} {
@@ -61,6 +72,15 @@ $footer-item-padding: 26px;
     padding: $footer-padding 0 0 0;
     margin-right: 28px;
 
+    @media #{$viewport-320} {
+      text-align: center;
+      margin: 0;
+    }
+
+    @media #{$viewport-600} {
+      text-align: left;
+    }
+
     @media #{$viewport-970} {
       padding: 50px 0 0;
       margin-right: 0;
@@ -69,9 +89,6 @@ $footer-item-padding: 26px;
     @media #{$viewport-1280} {
       padding: $footer-padding 0 0 0;
       margin-right: 28px;
-    }
-
-    &_item {
     }
 
     a {
@@ -90,6 +107,15 @@ $footer-item-padding: 26px;
 
   &-links {
     padding: $footer-padding 0 0 0;
+
+    @media #{$viewport-320} {
+      text-align: center;
+      margin: 0;
+    }
+
+    @media #{$viewport-600} {
+      text-align: left;
+    }
 
     @media #{$viewport-970} {
       padding: 50px 0 0;
@@ -117,6 +143,15 @@ $footer-item-padding: 26px;
     padding: $footer-padding 0 0 0;
     margin-right: 27px;
 
+    @media #{$viewport-320} {
+      text-align: center;
+      margin: 0;
+    }
+
+    @media #{$viewport-600} {
+      text-align: left;
+    }
+
     @media #{$viewport-750} {
       margin-right: 0;
     }
@@ -143,8 +178,26 @@ $footer-item-padding: 26px;
     padding: 48px 0 0 0;
     margin-right: 33px;
 
+    @media #{$viewport-320} {
+      margin: 0;
+      &_item {
+        display: inline-block;
+        padding: 0 5px;
+      }
+    }
+
+    @media #{$viewport-600} {
+      margin-left: 20px;
+    }
+
     @media #{$viewport-750} {
       margin-right: 18px;
+      margin-left: 0;
+
+      &_item {
+        display: block;
+        padding: 0 0;
+      }
     }
 
     @media #{$viewport-970} {

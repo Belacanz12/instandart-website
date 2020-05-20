@@ -5,6 +5,7 @@
     &, .page_container,
     .page_content {
       @media #{$viewport-320} {
+
         height: 827px;
       }
 
@@ -32,16 +33,28 @@
     .text {
       padding-left: 28px;
 
+      @media #{$viewport-320} {
+        padding-left: 0;
+      }
+
       @media #{$viewport-750} {
         padding-left: 0;
-        max-width: 300px;
       }
 
       &_header {
         margin: 0 0 55px;
 
+        @media #{$viewport-320} {
+          max-width: 300px;
+          margin: 0 0 50px;
+        }
+
         @media #{$viewport-750} {
           margin: 0 0 40px;
+        }
+
+        @media #{$viewport-1280} {
+          margin: 0 0 55px;
         }
       }
 
@@ -53,7 +66,12 @@
     .rounded-link {
       margin-top: 50px;
 
+      @media #{$viewport-320} {
+        display: none;
+      }
+
       @media #{$viewport-750} {
+        display: block;
         margin-top: 0;
       }
     }
@@ -64,6 +82,14 @@
   display: flex;
   flex-flow: row wrap;
 
+  @media #{$viewport-320} {
+    padding-left: 0;
+  }
+
+  @media #{$viewport-750} {
+    padding-left: 0;
+  }
+
   .info-block {
     font-family: $font-family-oswald;
     font-weight: $oswaldSemiBold;
@@ -71,7 +97,9 @@
     margin-bottom: 105px;
 
     @media #{$viewport-320} {
-
+      min-width: 50%;
+      margin-bottom: 55px;
+      flex: 0
     }
 
     @media #{$viewport-480} {
@@ -83,8 +111,8 @@
     }
 
     @media #{$viewport-750} {
-      min-width: 100px;
-      margin-bottom: 80px;
+      //min-width: 100px;
+      //margin-bottom: 80px;
     }
 
     @media #{$viewport-970} {
@@ -109,6 +137,7 @@
 
       @media #{$viewport-320} {
         font-size: 48px;
+        margin-bottom: 18px;
       }
 
       @media #{$viewport-480} {
@@ -148,7 +177,7 @@
       color: $black47;
 
       @media #{$viewport-320} {
-
+        max-width: 100px;
       }
 
       @media #{$viewport-480} {
@@ -167,28 +196,4 @@
       }
     }
   }
-}
-
-@media #{$viewport-320} {
-
-}
-
-@media #{$viewport-480} {
-
-}
-
-@media #{$viewport-600} {
-
-}
-
-@media #{$viewport-750} {
-
-}
-
-@media #{$viewport-970} {
-
-}
-
-@media #{$viewport-1280} {
-
 }

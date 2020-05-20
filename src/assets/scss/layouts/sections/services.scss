@@ -1,6 +1,7 @@
 .page {
-  &--services {
 
+  // only bg-image and height
+  &--services {
     &, .page_container,
     .page_content {
       @media #{$viewport-320} {
@@ -36,7 +37,7 @@
 
 .tabs-element {
   &--services {
-    margin-left: 5px;
+
   }
 
   .tab_item {
@@ -47,6 +48,10 @@
   .text {
     @media #{$viewport-750} {
       max-width: 520px;
+    }
+
+    @media #{$viewport-1280} {
+      max-width: 100%;
       margin-left: 88px;
     }
 
@@ -58,6 +63,11 @@
       margin: 0 100px 28px 0;
 
       @media #{$viewport-320} {
+        margin: 0 0 28px 0;
+        display: block;
+        &:last-of-type {
+          display: none;
+        }
       }
 
       @media #{$viewport-480} {
@@ -91,6 +101,10 @@
     line-height: 72px;
     margin-top: 50px;
 
+    @media #{$viewport-320} {
+      margin-top: 0;
+    }
+
     @media #{$viewport-750} {
       margin-top: 0;
     }
@@ -103,6 +117,21 @@
     margin: auto;
     top: 0;
     bottom: 0;
+
+    @media #{$viewport-320} {
+      left: 0;
+      right: 0;
+      top: initial;
+      bottom: -15px;
+    }
+
+    @media #{$viewport-600} {
+      margin: auto;
+      left: initial;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+    }
   }
 }
 

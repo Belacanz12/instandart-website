@@ -1,8 +1,9 @@
 @import "../../utils/vars";
 
 .page {
-  &--idea-to-product {
 
+  // only bg-image and height
+  &--idea-to-product {
     &, .page_container,
     .page_content {
       @media #{$viewport-320} {
@@ -10,7 +11,7 @@
       }
 
       @media #{$viewport-480} {
-        height: 480px;
+        height: 825px;
       }
 
       @media #{$viewport-600} {
@@ -39,7 +40,20 @@
 
   &_img{
     position: relative;
-    //max-height: 355px;
+
+    @media #{$viewport-320} {
+      max-width: 200px;
+      margin-bottom: 30px;
+    }
+
+    @media #{$viewport-480} {
+      max-width: 226px;
+    }
+
+    @media #{$viewport-600} {
+      max-width: initial;
+    }
+
     img {
       width: 100%;
       height: auto;
@@ -64,6 +78,7 @@
 
     @media #{$viewport-480} {
       font-size: 40px;
+      bottom: -25px;
     }
 
     @media #{$viewport-750} {
@@ -76,14 +91,19 @@
   }
 
   .text {
+
     @media #{$viewport-750} {
-      max-width: 300px;
-      margin-left: 15px;
+      //max-width: 300px;
     }
 
     &_header {
       max-width: 250px;
       margin: 0 0 50px 0;
+
+      @media #{$viewport-480} {
+        max-width: initial;
+        margin: 0 0 35px 0;
+      }
 
       @media #{$viewport-750} {
         max-width: 300px;
@@ -96,7 +116,11 @@
       line-height: 32px;
 
       @media #{$viewport-320} {
+        margin: 0 0 28px 0;
 
+        &:last-of-type {
+          display: none;
+        }
       }
 
       @media #{$viewport-480} {
@@ -138,5 +162,20 @@
     margin: auto;
     top: 0;
     bottom: 0;
+
+    @media #{$viewport-320} {
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: -15px;
+    }
+
+    @media #{$viewport-750} {
+      margin: auto;
+      left: initial;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+    }
   }
 }

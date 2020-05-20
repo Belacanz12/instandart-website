@@ -1,21 +1,12 @@
 @import "../../utils/vars";
 
 .page {
+
+  // only bg-image and height
   &--industry {
     .page_right {
       background: url("/assets/img/bgc/bg_services_1.jpg") center no-repeat transparent;
     }
-
-    .page_left {
-      @media #{$viewport-750} {
-        display: none;
-      }
-
-      @media #{$viewport-970} {
-        display: block;
-      }
-    }
-
 
     &, .page_container,
     .page_content {
@@ -59,6 +50,21 @@
     margin: auto;
     top: 0;
     bottom: 0;
+
+    @media #{$viewport-320} {
+      left: 0;
+      right: 0;
+      top: initial;
+      bottom: 0;
+    }
+
+    @media #{$viewport-600} {
+      margin: auto;
+      left: initial;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+    }
   }
 }
 

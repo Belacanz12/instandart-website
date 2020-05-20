@@ -35,13 +35,23 @@
       }
     }
 
+    @media #{$viewport-320} {
+      .range-slider {
+        display: none;
+      }
+    }
+
+    @media #{$viewport-600} {
+      .range-slider {
+        display: block;
+      }
+    }
+
   }
 }
 
 .banner-slider {
   .text {
-    margin-left: 20px;
-
     &_header {
       font-size: 90px;
       line-height: 105px;
