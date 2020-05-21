@@ -177,5 +177,13 @@
       top: 0;
       bottom: 0;
     }
+
+    @media #{$viewport-750} {
+      margin: auto;
+      left: initial;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+    }
   }
 }

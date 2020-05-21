@@ -22,8 +22,13 @@
       font-size: 50px;
     }
 
+    @media #{$viewport-750} {
+      margin-bottom: 50px;
+    }
+
     @media #{$viewport-1280} {
       font-size: 54px;
+      margin-bottom: 50px;
     }
   }
 
@@ -113,7 +118,7 @@
   }
 
   &_submit {
-    width: 165px;
+    width: 180px;
     margin-right: 45px;
     background-color: transparent;
     outline: none;

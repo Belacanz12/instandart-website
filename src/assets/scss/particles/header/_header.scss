@@ -114,13 +114,14 @@ header {
       }
     }
 
-    nav {
-      a {
+    li {
+      margin-left: 25px;
+    }
 
-      }
+    nav {
       .active-item {
         margin-left: -11px;
-        margin-right: -14px;
+        margin-right: 0;
       }
     }
   }
@@ -135,18 +136,20 @@ header {
     .brand-logo {
       svg {
         width: 144px;
+        height: 25px;
         margin-left: 0;
         margin-top: 0;
       }
     }
     li {
       line-height: $height;
+      margin-left: 70px;
     }
 
     nav {
       height: $height !important;
       .active-item {
-        margin-right: -12px;
+        margin-right: 0;
       }
     }
   }
@@ -161,16 +164,21 @@ header {
     .brand-logo svg {
       width: 172px;
       height: 37px;
-      margin-left: 4px;
+      margin-left: 22px;
       margin-top: 27px;
     }
 
     li {
       line-height: $height;
+      margin-left: 70px;
     }
 
     nav {
       height: $height !important;
+
+      .active-item {
+        margin-right: 25px;
+      }
     }
   }
 }

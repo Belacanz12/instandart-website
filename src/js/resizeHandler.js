@@ -45,6 +45,7 @@ $(document).ready(function(){
   const width33 = $('#width33-header'),
   rangeSliders = $('.range-slider--portfolio, .range-slider--product'),
   offset = width33.offset(),
+  position = width33.position(),
   headerOffset = $('header .container').offset(),
   widthElem = width33.width();
 
@@ -53,11 +54,18 @@ $(document).ready(function(){
     return Math.tan(140/1250) * (windowWidth - widthStart) - 2
   }
 
-  function setPageLeftWidth(elem, width){
-    const windowWidth = $(window).width();
+  function setPageLeftWidth(elem, offset, position){
+    const windowWidth = $(window).width(),
+      widthLeft = Math.ceil(offset + 14),
+      widthRight = windowWidth - widthLeft,
+      widthInnerLeft = Math.ceil(position + 14),
+      widthInnerRight = 1280 - widthInnerLeft;
 
     windowWidth >= 1280 && elem.each(function(){
-      $(this).css('width', width + getKoef(windowWidth));
+      $(this).find('.page_left').css('width', widthLeft);
+      $(this).find('.page_right').css('width', widthRight);
+      $(this).find('.page_left_content').css('width', widthInnerLeft);
+      $(this).find('.page_right_content').css('width', widthInnerRight);
     });
   }
 
@@ -76,21 +84,23 @@ $(document).ready(function(){
   }
 
   $(window).on('resize', function(){
-    const width33 = $('#width33-header');
-    const offset = width33.offset();
-    const widthElem = width33.width();
-
-    // позиционирование range
-    setRangeSliderPosition(rangeSliders, headerOffset.left);
+    const width33 = $('#width33-header'),
+    offset = width33.offset(),
+    position = width33.position(),
+    widthElem = width33.width();
 
     // добавочный коеффициент для page left
-    setPageLeftWidth($('.page_left'), offset.left + widthElem);
+    setPageLeftWidth($('.page'), offset.left + widthElem, position.left + widthElem);
+
+    //
+    setRangeSliderPosition(rangeSliders, headerOffset.left - 26);
 
     // добавление/удаление класса range-slider--horizontal
-    addClassForRange()
+    addClassForRange();
   });
 
-  setRangeSliderPosition(rangeSliders, headerOffset.left);
-  setPageLeftWidth($('.page_left'), offset.left + widthElem);
+  //
+  setRangeSliderPosition(rangeSliders, headerOffset.left - 26);
+  setPageLeftWidth($('.page'), offset.left + widthElem, position.left + widthElem);
   addClassForRange();
 });

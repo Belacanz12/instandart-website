@@ -106,6 +106,10 @@ h6, .h6 {
       margin: 0 0 36px;
     }
 
+    @media #{$viewport-750} {
+      margin: 0 0 25px;
+    }
+
     @media #{$viewport-970} {
       font-size: 17px;
       line-height: 30px;
@@ -114,6 +118,7 @@ h6, .h6 {
     @media #{$viewport-1280} {
       font-size: 18px;
       line-height: 32px;
+      margin: 0 0 25px;
     }
 
     @include themify($themes) {
@@ -278,8 +283,8 @@ h6, .h6 {
 
 .rounded-link{
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   text-decoration: none;
   overflow: hidden;
@@ -287,8 +292,8 @@ h6, .h6 {
   transition: all .5s ease;
 
   span {
-    width: 56px;
-    height: 56px;
+    width: 65px;
+    height: 65px;
     top: 50%;
     left: 50%;
     border-radius: 50%;
@@ -361,8 +366,8 @@ h6, .h6 {
 
   &:hover {
     span{
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
     }
 
     &:after {
@@ -388,7 +393,7 @@ h6, .h6 {
   padding: 0 25px;
   position: relative;
   width: auto;
-  display: block;
+  display: inline-block;
 
   @include themify($themes) {
     color: themed('textColor');
@@ -414,6 +419,8 @@ h6, .h6 {
 
   &--bold {
     font-size: 22px;
+    padding: 0 25px 0 35px;
+
     &:before {
       width: $size-bold;
       height: $size-bold;
@@ -424,16 +431,91 @@ h6, .h6 {
 }
 
 .tabs-element {
+  .text {
+    @media #{$viewport-750} {
+      max-width: 520px;
+    }
+
+    @media #{$viewport-1280} {
+      max-width: 100%;
+    }
+
+    &_header {
+      margin: 0 0 50px 0;
+
+      @media #{$viewport-1280} {
+        font-size: 54px;
+        margin: 0 10px 50px 0;
+      }
+    }
+
+    &_body {
+      @media #{$viewport-320} {
+        margin: 0 0 28px 0;
+        display: block;
+        &:last-of-type {
+          display: none;
+        }
+      }
+
+      @media #{$viewport-480} {
+      }
+
+      @media #{$viewport-600} {
+      }
+
+      @media #{$viewport-750} {
+        margin: 0 0 28px 0;
+        display: block;
+        &:last-of-type {
+          display: none;
+        }
+      }
+
+      @media #{$viewport-970} {
+        &:last-of-type {
+          display: block;
+        }
+      }
+
+      @media #{$viewport-1280} {
+        display: block;
+        margin: 0 100px 25px 0;
+        &:last-of-type {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .active-item {
+    font-size: 22px;
+    line-height: 72px;
+    margin-top: 50px;
+
+    @media #{$viewport-320} {
+      margin-top: 0;
+    }
+
+    @media #{$viewport-750} {
+      margin-top: 0;
+    }
+
+    @media #{$viewport-1280} {
+      margin-top: 25px;
+    }
+  }
+
   .tab_item {
-    max-width: 320px;
+    max-width: 340px;
     font-size: 20px;
     line-height: 28px;
     font-family: $font-family-oswald;
     font-weight: 500;
     letter-spacing: -0.1px;
-    padding: 0 10px;
     border-left: 2px solid transparent;
     margin-bottom: 40px;
+    padding: 0 0 0 25px;
     cursor: pointer;
     transition: all .5s ease;
 
@@ -472,5 +554,6 @@ h6, .h6 {
   visibility: hidden;
   top: 0;
   bottom: 0;
-  left: calc(100%/3) ;
+  left: calc(100%/3);
+  //background-color: #fff;
 }

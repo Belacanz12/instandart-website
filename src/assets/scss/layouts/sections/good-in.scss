@@ -35,6 +35,9 @@
     .text {
 
       &_header {
+        @media #{$viewport-320} {
+          letter-spacing: 1.5px;
+        }
       }
 
       &_body {
@@ -69,7 +72,7 @@
   }
 
   @media #{$viewport-1280} {
-
+    height: 467px;
   }
 
   &_item {
@@ -99,6 +102,11 @@
 
     @media #{$viewport-970} {
       width: 50px;
+    }
+
+    @media #{$viewport-1280} {
+      margin: 0;
+      width: 90px;
     }
     @extend .transition;
 
