@@ -5,7 +5,8 @@ $footer-item-padding: 26px;
 
 .page {
   &--footer {
-    border: 1px solid $grey27;
+    border-top: 1px solid $grey27;
+    border-bottom: 1px solid $grey27;
 
     @media #{$viewport-320} {
       height: auto;
