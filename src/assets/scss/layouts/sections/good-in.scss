@@ -89,11 +89,8 @@
     }
   }
 
-  &_img {
-    filter: grayscale(100%);
-    display: block;
+  &_img_wrap {
     margin: 0 auto;
-    cursor: pointer;
     width: 50px;
 
     @media #{$viewport-750} {
@@ -105,9 +102,16 @@
     }
 
     @media #{$viewport-1280} {
-      margin: 0;
       width: 90px;
+      margin: 0;
     }
+  }
+
+  &_img {
+    filter: grayscale(100%);
+    display: block;
+    cursor: pointer;
+    width: 100%;
     @extend .transition;
 
     &:hover {

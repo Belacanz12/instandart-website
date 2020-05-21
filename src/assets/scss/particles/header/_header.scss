@@ -24,15 +24,17 @@ header {
     background-color: $black;
 
     a {
-      color: #626262;
+      font-size: 16px;
       font-family: $font-family-roboto;
+      font-weight: 500;
+      color: $grey8c;
       transition: color $desktop-nav-animation-time ease;
       padding: 0 35px;
 
       &:hover {
-        color: $white;
+        color: $yellow;
         background-color: transparent;
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
 
