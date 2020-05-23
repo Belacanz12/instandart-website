@@ -1,19 +1,122 @@
 @import "../utils/vars";
 
+//.cursor {
+//  opacity: 0;
+//  pointer-events: none;
+//  user-select: none;
+//  position: fixed;
+//  transform-origin: center center;
+//  border-radius: 50%;
+//  z-index: 1000;
+//  mix-blend-mode: exclusion;
+//  width: 72px;
+//  height: 72px;
+//}
+//
+//.cursor, .cursor svg {
+//  left: 50%;
+//  top: 50%;
+//  transform: translate(-50%, -50%)
+//}
+//
+//.cursor svg {
+//  position: absolute;
+//  transition: .25s ease
+//}
+//
+//.cursor svg.hover {
+//  transform: scale(0) translate(-50%, -50%);
+//  transform-origin: 0 0;
+//  opacity: 0
+//}
+//
+//.cursor svg.hover.active {
+//  transform: scale(1) translate(-50%, -50%);
+//  opacity: 1
+//}
+//
+//.cursor svg.default {
+//  transform-origin: 0 0
+//}
+//
+//.cursor.show {
+//  opacity: 1
+//}
+//
+//.cursor.hover {
+//  transform: translate(-50%, -50%) scale(2)
+//}
+//
+//.cursor.active .default {
+//  transform: scale(0) translate(-50%, -50%)
+//}
+//
+//.cursor.hoverLink .default {
+//  transform: scale(1.2) translate(-50%, -50%)
+//}
+//
+//.cursor .cursor__bg {
+//  transition: transform .2s ease-in-out;
+//  -webkit-backface-visibility: hidden;
+//  backface-visibility: hidden;
+//  display: block;
+//  mix-blend-mode: exclusion;
+//  background: #fff;
+//  width: 72px;
+//  height: 72px;
+//  border-radius: 50%;
+//  transform: translate(-50%, -50%) scale(0);
+//  transform-origin: 50% 50%;
+//  position: absolute;
+//  left: 50%;
+//  top: 50%
+//}
+//
+//.cursor.is-medium .cursor__bg {
+//  transform: scale(.5) translate(-50%, -50%);
+//}
+//
+//.cursor.defaultColor {
+//  mix-blend-mode: normal
+//}
+//
+//.cursor.defaultColor .cursor__bg {
+//  background: #000
+//}
+//
+//.cursor.is-big .cursor__bg {
+//  -webkit-transform: translate(-50%, -50%) scale(1);
+//  transform: translate(-50%, -50%) scale(1)
+//}
+//
+//.cursor.white .cursor__bg {
+//  background: #fff
+//}
+//
+//.mobile .cursor {
+//  position: absolute;
+//  transition: left .15s ease, top .15s ease, width .5s ease, height .5s ease, -webkit-transform .5s ease-in-out;
+//  transition: left .15s ease, top .15s ease, transform .5s ease-in-out, width .5s ease, height .5s ease;
+//  transition: left .15s ease, top .15s ease, transform .5s ease-in-out, width .5s ease, height .5s ease, -webkit-transform .5s ease-in-out
+//}
+
 .cursor-layer {
   position: absolute;
-  width: 0;
-  height: 0;
-  background-color: $yellow;
-  border-radius: 50%;
+  background: $yellow;
   left: 0;
   top: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
   transition: opacity .3s ease-in, width .3s ease-in, height .3s ease-in;
+  z-index: 1000;
 }
 
 .cursor {
   @extend .cursor-layer;
-  opacity: 0;
+  opacity: 1;
   transform: translate(-50%, -50%);
   mix-blend-mode: exclusion;
 }
+
+

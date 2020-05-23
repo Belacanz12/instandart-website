@@ -1,8 +1,6 @@
 import $ from 'jquery';
 
 function addClassForRange(){
-  console.log('hello world');
-
   const horizontal = {
       480: [
         'range-slider--product',

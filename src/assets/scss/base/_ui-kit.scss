@@ -85,6 +85,7 @@ h6, .h6 {
     @media #{$viewport-970} {
         font-size: 50px;
         line-height: 58px;
+        margin: 0 0 55px;
     }
 
     @media #{$viewport-1280} {
@@ -103,6 +104,14 @@ h6, .h6 {
     @media #{$viewport-320} {
       font-size: 15px;
       line-height: 26px;
+      margin: 0 0 36px;
+    }
+
+    @media #{$viewport-480} {
+      margin: 0 0 18px;
+    }
+
+    @media #{$viewport-600} {
       margin: 0 0 36px;
     }
 
@@ -260,12 +269,13 @@ h6, .h6 {
 
     &:after {
       content: '';
-      display: block;
+      display: inline-block;
       position: absolute;
-      top: 3px;
+      top: 5px;
       right: -5px;
       width: 8px;
       height: 8px;
+      @extend .transition;
 
       @include themify($themes) {
         background: themed('arrowBgc')
@@ -273,10 +283,14 @@ h6, .h6 {
     }
 
     &:hover {
+      text-decoration: none;
       @include themify($themes) {
         color: themed('textColor');
       }
-      text-decoration: none;
+
+      &:after {
+        right: -10px;
+      }
     }
   }
 }
@@ -307,7 +321,7 @@ h6, .h6 {
     width: 65px;
     height: 65px;
     span {
-      border: 1px solid $yellow;
+      border: 2px solid $yellow;
       background-color: transparent;
     }
 
@@ -365,10 +379,10 @@ h6, .h6 {
   }
 
   &:hover {
-    span{
-      width: 70px;
-      height: 70px;
-    }
+    //span{
+    //  width: px;
+    //  height: 70px;
+    //}
 
     &:after {
       left: 150%
@@ -389,14 +403,13 @@ h6, .h6 {
   font-weight: 600;
   font-size: 17px;
   cursor: pointer;
-  color: $greyE2;
   padding: 0 25px;
   position: relative;
   width: auto;
   display: inline-block;
 
   @include themify($themes) {
-    color: themed('textColor');
+    color: themed('textColorItem');
   }
 
   &:before {
@@ -412,6 +425,9 @@ h6, .h6 {
   }
 
   &:hover {
+    @include themify($themes) {
+      color: themed('textColorItem') !important;
+    }
     &:before {
       background-color: transparent;
     }
@@ -442,6 +458,10 @@ h6, .h6 {
 
     &_header {
       margin: 0 0 50px 0;
+
+      @media #{$viewport-480} {
+        margin: 0 0 35px 0;
+      }
 
       @media #{$viewport-1280} {
         font-size: 54px;

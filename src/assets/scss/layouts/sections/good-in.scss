@@ -38,6 +38,11 @@
         @media #{$viewport-320} {
           letter-spacing: 1.5px;
         }
+
+        @media #{$viewport-600} {
+          letter-spacing: 0;
+          margin: 0 0 40px;
+        }
       }
 
       &_body {

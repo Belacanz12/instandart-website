@@ -3,7 +3,7 @@
 
 .page {
   &--portfolio {
-    background: url("/assets/img/bgc/bg-portfolio.jpg") center no-repeat transparent;
+    //background: url("/assets/img/bgc/bg-portfolio.jpg") center no-repeat transparent;
 
     &, .page_container,
     .page_content {
@@ -35,6 +35,23 @@
 }
 
 .portfolio-slider{
+  .slick-slide {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &_text {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 450px;
+    color: $black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
   &_item {
     .text {
       margin-left: 35px;

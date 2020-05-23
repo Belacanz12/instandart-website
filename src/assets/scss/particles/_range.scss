@@ -12,7 +12,7 @@
 
     left: -4px;
     width: 10px;
-    height: 4px;
+    height: 10px;
     cursor: pointer;
     @include themify($themes) {
       background: themed('rangeBgArrow');

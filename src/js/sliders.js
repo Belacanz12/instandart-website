@@ -24,6 +24,22 @@ function patching(func) {
   }
 }
 
+function changePortfolioBg(element, slide) {
+  const page =  element.closest('.page'),
+    bgElement = page.find('.portfolio-slider_item').eq(slide),
+  data = bgElement.data('bgc');
+
+  page.css({'background': `url(${data}) center no-repeat transparent`});
+}
+
+function changePortfolioText(element, slide) {
+  const sl =  element.closest('.page').find('.portfolio-slider_item').eq(slide),
+    text = sl.find('.text_header').text(),
+    textElement = sl.find('.portfolio-slider_text');
+
+  textElement.text(text);
+}
+
 $(document).ready(function () {
   const mediator = {
     banner: null,
@@ -109,10 +125,29 @@ $(document).ready(function () {
       $('.range-slider--portfolio').rangeSlick({
         allSlide: _.portfolioObject.slideCount,
         duration: _.portfolioObject.options.autoplaySpeed,
+        initRange: function(){
+          const elem = $(this.element),
+            slide = this.currentSlide + 1;
+
+          changePortfolioBg(elem, slide);
+          changePortfolioText(elem, slide);
+        },
         funcSlickNext: function() {
+          const elem = $(this.element),
+            slide = this.currentSlide + 1;
+
+          changePortfolioBg(elem, slide);
+          changePortfolioText(elem, slide);
+
           _.portfolio.slick('slickNext');
         },
         funcSlickPrev: function () {
+          const elem = $(this.element),
+            slide = this.currentSlide + 1;
+
+          changePortfolioBg(elem, slide);
+          changePortfolioText(elem, slide);
+
           _.portfolio.slick('slickPrev');
         }
       });

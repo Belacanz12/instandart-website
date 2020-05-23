@@ -260,6 +260,10 @@
         flex-flow: column-reverse nowrap;
         justify-content: center;
       }
+
+      .page_right_content {
+        padding-right: 17px;
+      }
     }
 
     &--good-in {
@@ -425,6 +429,13 @@
         max-width: 100%;
         padding-right: 12px;
         padding-left: 19px;
+      }
+    }
+
+    &--portfolio {
+      .page_right_content,
+      .page_left_content {
+        padding-left: 0;
       }
     }
 

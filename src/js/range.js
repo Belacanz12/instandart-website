@@ -35,12 +35,14 @@
 
       _.foo = false;
       _.defaults = {
+        element: element,
         currentSlide: 1,
         allSlide: 1,
         duration: 1000,
         isRange: false,
         funcSlickNext: function() {},
-        funcSlickPrev: function () {}
+        funcSlickPrev: function () {},
+        initRange: function() {}
       }
 
       _.initials = {
@@ -137,6 +139,7 @@
 
       _.init = function(){
         _.initEvents();
+        _.initRange();
         _.changeAllSlide(_.allSlide);
         _.runInterval();
       }

@@ -45,8 +45,13 @@
         margin: 0 0 55px;
 
         @media #{$viewport-320} {
-          max-width: 300px;
+          max-width: 200px;
           margin: 0 0 50px;
+        }
+
+        @media #{$viewport-480} {
+          max-width: 300px;
+          margin: 0 0 35px;
         }
 
         @media #{$viewport-750} {
@@ -84,6 +89,10 @@
 
   @media #{$viewport-320} {
     padding-left: 0;
+  }
+
+  @media #{$viewport-480} {
+    margin-top: 45px;
   }
 
   @media #{$viewport-750} {
@@ -178,12 +187,13 @@
       color: $black47;
 
       @media #{$viewport-320} {
-        max-width: 140px;
+        max-width: 100px;
       }
 
       @media #{$viewport-480} {
         font-size: 20px;
         line-height: 24px;
+        max-width: 140px;
       }
 
       @media #{$viewport-970} {

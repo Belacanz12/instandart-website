@@ -6,7 +6,7 @@
     font-family: $font-family-oswald;
     font-weight: 600;
     color: $greyE2;
-    font-size: 50px;
+    font-size: 51px;
     line-height: 65px;
     letter-spacing: -1px;
     padding: 0 0 15px 0;
@@ -19,7 +19,8 @@
     }
 
     @media #{$viewport-600} {
-      font-size: 50px;
+      font-size: 51px;
+      margin-bottom: 53px;
     }
 
     @media #{$viewport-750} {
@@ -83,6 +84,10 @@
     @media #{$viewport-480} {
       flex-flow: row nowrap;
     }
+
+    @media #{$viewport-600} {
+      margin: 35px 0;
+    }
   }
 
   &_reset {
@@ -97,6 +102,7 @@
     font-size: 16px;
     font-weight: 900;
     font-family: $font-family-roboto;
+    line-height: 25px;
     &:after{
       $size: 11px;
       content: '';
@@ -124,6 +130,7 @@
     outline: none;
     border: none;
     font-size: 22px;
+    line-height: 25px;
 
     @media #{$viewport-320} {
       margin-right: 0;
@@ -183,8 +190,8 @@
     outline: none;
     background-color: transparent;
     position: absolute;
-    top: -30px;
-    right: 30px
+    top: -50px;
+    right: -5px;
   }
 }
 
