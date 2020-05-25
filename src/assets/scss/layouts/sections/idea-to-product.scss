@@ -91,7 +91,6 @@
   }
 
   .text {
-
     @media #{$viewport-750} {
       //max-width: 300px;
     }
@@ -109,6 +108,11 @@
         max-width: 300px;
         margin: 0 0 35px 0;
       }
+
+      @media #{$viewport-1280} {
+        max-width: 360px;
+        margin: 0 0 35px 0;
+      }
     }
 
     &_body {
@@ -123,28 +127,12 @@
         }
       }
 
-      @media #{$viewport-480} {
-
-      }
-
-      @media #{$viewport-600} {
-
-      }
-
       @media #{$viewport-750} {
         margin: 0 0 28px 0;
 
         &:last-of-type {
           display: none;
         }
-      }
-
-      @media #{$viewport-970} {
-
-      }
-
-      @media #{$viewport-1280} {
-
       }
     }
   }
@@ -153,7 +141,6 @@
     padding: 0 0 0 25px;
     max-width: 340px;
   }
-
 }
 
 .range-slider {
@@ -168,14 +155,6 @@
       right: 0;
       top: auto;
       bottom: -15px;
-    }
-
-    @media #{$viewport-750} {
-      margin: auto;
-      left: initial;
-      right: 30px;
-      top: 0;
-      bottom: 0;
     }
 
     @media #{$viewport-750} {

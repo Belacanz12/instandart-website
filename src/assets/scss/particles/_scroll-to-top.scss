@@ -11,15 +11,17 @@ $width: 60px;
   cursor: pointer;
   &:hover {
     span {
-      height: 52px;
-      background-color: $greyEA;
+      bottom: 0;
+      background-color: $greyb4;
       &:before, &:after {
-        background-color: $greyEA;
+        background-color: $greyb4;
       }
     }
   }
 
-  span {
+  .scroll-to-top_wrap {
+    height: 52px;
+    overflow: hidden;
     position: absolute;
     left: 0;
     right: 0;
@@ -27,15 +29,24 @@ $width: 60px;
     bottom: 0;
     margin: auto;
     display: block;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    margin: auto;
+    display: block;
     width: 2px;
-    height: 37px;
+    height: 52px;
     background-color: $grey6a;
     @extend .transition;
 
     &:before, &:after {
       content: '';
       width: 1.5px;
-      height: 13px;
+      height: 10px;
       position: absolute;
       top: 0;
       @extend .transition;

@@ -78,6 +78,12 @@
 
   @media #{$viewport-1280} {
     height: 467px;
+
+    &:hover {
+      .simplebar-track.simplebar-vertical {
+        width: 5px;
+      }
+    }
   }
 
   &_item {
@@ -91,6 +97,10 @@
 
     @media #{$viewport-970} {
       width: 33%;
+    }
+
+    @media #{$viewport-970} {
+      margin-bottom: 75px;
     }
   }
 
@@ -144,35 +154,12 @@
   }
 
   .simplebar-track.simplebar-vertical {
-    width: 2px !important;
+    width: 2px;
     background-color: #d3d3d3;
+    @extend .transition;
 
     .simplebar-scrollbar {
       background-color: #161616;
     }
   }
-}
-
-@media #{$viewport-320} {
-
-}
-
-@media #{$viewport-480} {
-
-}
-
-@media #{$viewport-600} {
-
-}
-
-@media #{$viewport-750} {
-
-}
-
-@media #{$viewport-970} {
-
-}
-
-@media #{$viewport-1280} {
-
 }

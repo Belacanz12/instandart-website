@@ -178,6 +178,24 @@
      margin: 0;
    }
   }
+
+  textarea.materialize-textarea:focus:not([readonly])+label {
+    color: $white !important;
+  }
+
+  textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $white!important;
+    box-shadow: 0 1px 0 0 $white!important;
+  }
+
+  input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid $white!important;
+    box-shadow: 0 1px 0 0 $white!important;
+  }
+
+  input[type=text]:not(.browser-default):focus:not([readonly]) + label {
+    color: $white !important;
+  }
 }
 
 .md-modal-form {
@@ -192,6 +210,14 @@
     position: absolute;
     top: -50px;
     right: -5px;
+  }
+
+  .md-content .active-item, {
+    font-size: 22px;
+    color: #e2e2e2!important;
+    &:hover {
+      color: #e2e2e2!important;
+    }
   }
 }
 

@@ -1,17 +1,23 @@
 import $ from 'jquery';
+import { getScrollHeight } from './utils';
 
 $(document).ready(function(){
+  const scrollHeight = $('.page--banner').height() +
+    $('.page--company').height() + $('.page--services').height();
+
   $('#scroll-to-top').on('click', function(){
     $("html, body").animate({ scrollTop: 0 }, 600 );
     return false;
   });
 
+  console.log(scrollHeight);
+
   $(window).on('scroll', function(){
     const scrollTop = $('html').scrollTop();
 
-    if(scrollTop > 300){
+    if(scrollTop > scrollHeight) {
       $('#scroll-to-top').fadeIn();
-    }else{
+    } else {
       $('#scroll-to-top').fadeOut()
     }
   });

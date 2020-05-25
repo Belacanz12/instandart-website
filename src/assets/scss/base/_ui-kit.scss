@@ -83,8 +83,8 @@ h6, .h6 {
     }
 
     @media #{$viewport-970} {
-        font-size: 50px;
-        line-height: 58px;
+        font-size: 40px;
+        line-height: 48px;
         margin: 0 0 55px;
     }
 
@@ -258,13 +258,13 @@ h6, .h6 {
 
   &_right {
     font-size: 16px;
-    font-family: $font-family-oswald;
+    font-family: $font-family-roboto;
     font-weight: $oswaldSemiBold;
     padding: 0 10px 0 0;
     position: relative;
 
     @include themify($themes) {
-      color: themed('textColor');
+      color: themed('sectionTextColorRight');
     }
 
     &:after {
@@ -273,7 +273,7 @@ h6, .h6 {
       position: absolute;
       top: 5px;
       right: -5px;
-      width: 8px;
+      width: 12px;
       height: 8px;
       @extend .transition;
 
@@ -285,7 +285,7 @@ h6, .h6 {
     &:hover {
       text-decoration: none;
       @include themify($themes) {
-        color: themed('textColor');
+        color: themed('sectionTextColorRight');
       }
 
       &:after {
@@ -478,12 +478,6 @@ h6, .h6 {
         }
       }
 
-      @media #{$viewport-480} {
-      }
-
-      @media #{$viewport-600} {
-      }
-
       @media #{$viewport-750} {
         margin: 0 0 28px 0;
         display: block;
@@ -532,6 +526,7 @@ h6, .h6 {
     line-height: 28px;
     font-family: $font-family-oswald;
     font-weight: 500;
+    color: $grey42;
     letter-spacing: -0.1px;
     border-left: 2px solid transparent;
     margin-bottom: 40px;

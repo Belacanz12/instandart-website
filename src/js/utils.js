@@ -36,3 +36,25 @@ export const throttle = (func, limit) => {
     }
   }
 }
+
+export const getScrollHeight = (width) => {
+  let i = 0 - 600;
+
+  if(width === 320) {
+    i += 2030;
+  } else if(320 <= width && width < 480) {
+    i += 2234;
+  } else if(480 <= width && width < 600){
+    i += 2148;
+  } else if(600 <= width && width < 750){
+    i += 1720;
+  } else if(750 <= width && width < 970){
+    i += 2013;
+  } else if(970 <= width && width < 1280){
+    i += 2817;
+  } else {
+    i += 2817;
+  }
+
+  return i;
+}

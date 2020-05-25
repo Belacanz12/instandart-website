@@ -23,9 +23,10 @@ header {
   nav {
     height: $height !important;
     background-color: $black;
+    box-shadow: none;
 
     a {
-      font-size: 16px;
+      font-size: 17px;
       font-family: $font-family-roboto;
       font-weight: 500;
       color: $grey62;
@@ -168,7 +169,7 @@ header {
 }
 
 @media #{$viewport-1280} {
-  $height: 88px;
+  $height: 72px;
 
   header {
     height: $height !important;
@@ -180,7 +181,7 @@ header {
         width: 172px;
         height: 37px;
         margin-left: 22px;
-        margin-top: 27px;
+        margin-top: 19px;
       }
     }
 

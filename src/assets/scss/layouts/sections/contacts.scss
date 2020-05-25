@@ -46,7 +46,7 @@
     &_header {
       font-family: $font-family-oswald;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 40px;
       letter-spacing: 1px;
       margin-bottom: 10px;
@@ -60,6 +60,7 @@
 
   .link {
     letter-spacing: 1px;
+    font-weight: 500;
   }
 }
 
@@ -93,28 +94,4 @@
       background: url("/assets/img/icon/ukraine_flag.svg") center no-repeat transparent;
     }
   }
-}
-
-@media #{$viewport-320} {
-
-}
-
-@media #{$viewport-480} {
-
-}
-
-@media #{$viewport-600} {
-
-}
-
-@media #{$viewport-750} {
-
-}
-
-@media #{$viewport-970} {
-
-}
-
-@media #{$viewport-1280} {
-
 }

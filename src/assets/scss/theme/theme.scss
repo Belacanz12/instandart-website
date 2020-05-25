@@ -12,6 +12,7 @@ $themes: (
   light: (
     backgroundColor: $white,
     sectionTextColor: $greyb8,
+    sectionTextColorRight: $greyb4,
     textColor: $grey,
     textColorItem: $greyE2,
     headerText: $grey62,
@@ -31,6 +32,7 @@ $themes: (
   dark: (
     backgroundColor: $black,
     sectionTextColor: $grey40_invert,
+    sectionTextColorRight: $greyb4,
     textColor: $grey8c,
     textColorItem: $greyE2,
     headerText: $grey62,
