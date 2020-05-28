@@ -58,12 +58,12 @@
       text-transform: initial;
 
       @media #{$viewport-320} {
-        font-size: 50px;
+        font-size: 40px;
         line-height: 60px;
       }
 
       @media #{$viewport-480} {
-        font-size: 74px;
+        font-size: 60px;
         line-height: 80px;
       }
 

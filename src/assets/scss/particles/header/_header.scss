@@ -57,6 +57,29 @@ header {
   li {
     line-height: $height;
   }
+
+  .sidenav{
+    padding-top: 40px;
+    background-color: #202020;
+    li {
+      a {
+        font-size: 26px;
+        line-height: 60px;
+        font-family: $font-family-oswald;
+        font-weight: $oswaldSemiBold;
+        height: auto;
+        color: $grey8a;
+
+        &:active {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+.sidenav-overlay {
+  background-color: rgba(0, 0, 0, 0.6)
 }
 
 @media #{$viewport-320} {
@@ -140,7 +163,7 @@ header {
 }
 
 @media #{$viewport-970} {
-  $height: 72px;
+  $height: 66px;
 
   header {
     height: $height !important;

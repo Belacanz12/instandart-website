@@ -76,7 +76,7 @@
     bottom: -15px;
     right: 28px;
 
-    @media #{$viewport-480} {
+    @media #{$viewport-320} {
       font-size: 40px;
       bottom: -25px;
     }
@@ -87,6 +87,7 @@
 
     @media #{$viewport-970} {
       font-size: 56px;
+      bottom: -15px;
     }
   }
 
@@ -97,7 +98,7 @@
 
     &_header {
       max-width: 250px;
-      margin: 0 0 50px 0;
+      margin: 0 0 35px 0;
 
       @media #{$viewport-480} {
         max-width: initial;
@@ -117,7 +118,6 @@
 
     &_body {
       margin: 0 100px 28px 0;
-      line-height: 32px;
 
       @media #{$viewport-320} {
         margin: 0 0 28px 0;

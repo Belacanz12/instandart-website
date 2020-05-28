@@ -79,6 +79,7 @@
 
     @media #{$viewport-320} {
       flex-flow: column nowrap;
+      margin: 47px 0 0;
     }
 
     @media #{$viewport-480} {
@@ -210,6 +211,14 @@
     position: absolute;
     top: -50px;
     right: -5px;
+
+    @media #{$viewport-320} {
+      top: 15px;
+    }
+
+    @media #{$viewport-600} {
+      top: -50px;
+    }
   }
 
   .md-content .active-item, {
@@ -217,6 +226,27 @@
     color: #e2e2e2!important;
     &:hover {
       color: #e2e2e2!important;
+    }
+  }
+
+  .form {
+    &_submit {
+      width: 150px;
+      font-size: 16px !important;
+    }
+
+    &_reset {
+      margin: 0;
+    }
+
+    &_buttons {
+      @media #{$viewport-320} {
+        margin: 10px 0;
+      }
+
+      @media #{$viewport-480} {
+        margin: 20px 0;
+      }
     }
   }
 }

@@ -68,7 +68,7 @@ h6, .h6 {
     @extend .header-font;
     font-size: 36px;
     margin: 0 0 40px;
-    letter-spacing: -0.5px;
+    letter-spacing: -1.5px;
 
     @media #{$viewport-320} {
         font-size: 30px;
@@ -79,7 +79,7 @@ h6, .h6 {
     @media #{$viewport-480} {
         font-size: 40px;
         line-height: 48px;
-        margin: 0 0 55px;
+        margin: 0 0 46px;
     }
 
     @media #{$viewport-970} {
@@ -447,6 +447,15 @@ h6, .h6 {
 }
 
 .tabs-element {
+
+  @media #{$viewport-970} {
+    padding-right: 40px;
+  }
+
+  @media #{$viewport-1280} {
+    padding-right: 0;
+  }
+
   .text {
     @media #{$viewport-750} {
       max-width: 520px;

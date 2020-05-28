@@ -130,14 +130,12 @@ $(document).ready(function () {
             slide = this.currentSlide + 1;
 
           changePortfolioBg(elem, slide);
-          changePortfolioText(elem, slide);
         },
         funcSlickNext: function() {
           const elem = $(this.element),
             slide = this.currentSlide + 1;
 
           changePortfolioBg(elem, slide);
-          changePortfolioText(elem, slide);
 
           _.portfolio.slick('slickNext');
         },
@@ -146,7 +144,6 @@ $(document).ready(function () {
             slide = this.currentSlide + 1;
 
           changePortfolioBg(elem, slide);
-          changePortfolioText(elem, slide);
 
           _.portfolio.slick('slickPrev');
         }
