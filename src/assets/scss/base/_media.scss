@@ -1029,176 +1029,6 @@
         padding-right: 0;
       }
     }
-
-    //&--company {
-    //  .page_left {
-    //    width: calc(50% - #{$containerWidth}/6);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right {
-    //    width: calc(50% + #{$containerWidth}/6);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_left_content {
-    //    width: $containerLeftWidth;
-    //    max-width: $containerLeftMaxWidth;
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right_content {
-    //    width: $containerRightWidth;
-    //    max-width: $containerRightMaxWidth;
-    //    padding: 0;
-    //    padding-left: $containerRightWidth/8;
-    //  }
-    //}
-    //
-    //&--services {
-    //  .page_left {
-    //    display: flex;
-    //    width: calc(50% - #{$containerWidth}/6);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right {
-    //    width: calc(50% + #{$containerWidth}/6);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right_content {
-    //    max-width: $containerRightMaxWidth;
-    //    padding-left: $containerRightWidth/8;
-    //  }
-    //}
-    //
-    //&--idea-to-product {
-    //  .page_left,
-    //  .page_right {
-    //    padding: 0;
-    //  }
-    //
-    //  .page_left_content {
-    //    max-width: $containerLeftMaxWidth;
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right_content {
-    //    max-width: $containerRightMaxWidth;
-    //    padding-left: $containerRightWidth/8;
-    //  }
-    //}
-    //
-    //&--industry {
-    //  .page_left {
-    //    display: flex;
-    //    width: calc(50% - #{$containerWidth}/6);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right {
-    //    width: calc(50% + #{$containerWidth}/6);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_left_content {
-    //    max-width: $containerLeftMaxWidth;
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right_content {
-    //    max-width: $containerRightMaxWidth;
-    //    padding-left: $containerRightWidth/8;
-    //  }
-    //}
-    //
-    //&--portfolio {
-    //  .page_left,
-    //  .page_right {
-    //    padding: 0;
-    //  }
-    //
-    //  .page_left_content {
-    //    max-width: $containerLeftMaxWidth;
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right_content {
-    //    max-width: $containerRightMaxWidth;
-    //    padding-left: $containerRightWidth/8;
-    //  }
-    //}
-    //
-    //&--good-in {
-    //  .page_left {
-    //    width: calc(50% - #{$containerWidth}/6);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right {
-    //    width: calc(50% + #{$containerWidth}/6);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_left_content {
-    //    width: $containerLeftWidth;
-    //    max-width: $containerLeftMaxWidth;
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right_content {
-    //    width: $containerRightWidth;
-    //    max-width: $containerRightMaxWidth;
-    //    padding-left: $containerRightWidth/8;
-    //  }
-    //}
-    //
-    //&--contacts {
-    //  .page_right {
-    //    width: calc(50% + #{$containerWidth}/6  + 17px);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_left {
-    //    display: flex;
-    //    width: calc(50% - #{$containerWidth}/6  - 17px);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right_content {
-    //    max-width: $containerRightMaxWidth;
-    //    padding-left: $containerRightWidth/8;
-    //  }
-    //
-    //  .page_left_content {
-    //    padding: 0;
-    //  }
-    //}
-    //
-    //&--footer {
-    //  .page_left {
-    //    width: calc(50% - #{$containerWidth}/6  + 17px);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_right {
-    //    width: calc(50% + #{$containerWidth}/6  - 17px);
-    //    padding: 0;
-    //  }
-    //
-    //  .page_left_content {
-    //    width: $containerLeftWidth;
-    //    max-width: $containerLeftMaxWidth;
-    //  }
-    //
-    //  .page_right_content {
-    //    width: $containerRightWidth;
-    //    max-width: $containerRightMaxWidth;
-    //    padding-left: $containerRightWidth/8;
-    //  }
-    //}
-
   }
 
 
@@ -1209,6 +1039,26 @@
 
     &--portfolio {
       right: calc(50% - #{$containerWidth}/2);
+    }
+  }
+}
+
+@media #{$viewport-1600} {
+  .page {
+    &--idea-to-product {
+      .page_right_content {
+        padding: 0 10% 0 9.5%;
+      }
+    }
+  }
+}
+
+@media #{$viewport-2500} {
+  .page {
+    &--idea-to-product {
+      .page_right_content {
+        padding: 0 12% 0 9.5%;
+      }
     }
   }
 }

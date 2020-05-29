@@ -6,6 +6,8 @@ $screen-600-min: 600;
 $screen-750-min: 750;
 $screen-970-min: 970;
 $screen-1280-min: 1280;
+$screen-1600-min: 1600;
+$screen-2500-min: 2500;
 
 $mobile-viewport: "(max-width: #{$screen-600-min - 1}px)";
 $viewport-320: "only screen and (min-width: #{$screen-320-min}px)";
@@ -14,6 +16,8 @@ $viewport-600: "only screen and (min-width: #{$screen-600-min}px)";
 $viewport-750: "only screen and (min-width: #{$screen-750-min}px)";
 $viewport-970: "only screen and (min-width: #{$screen-970-min}px)";
 $viewport-1280: "only screen and (min-width: #{$screen-1280-min}px)";
+$viewport-1600: "only screen and (min-width: #{$screen-1600-min}px)";
+$viewport-2500: "only screen and (min-width: #{$screen-2500-min}px)";
 
 $gutter-width: 18px;
 $gutter-width-middle: 28px;

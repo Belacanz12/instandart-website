@@ -317,6 +317,10 @@ h6, .h6 {
     transition: all .5s ease;
   }
 
+  @media #{$viewport-1280} {
+    margin-top: 50px;
+  }
+
   &.rounded-link-banner {
     width: 65px;
     height: 65px;
@@ -326,10 +330,10 @@ h6, .h6 {
     }
 
     &:after, &:before {
-      transform: translate(-50%, -50%) rotate(90deg);
-      mask: url("/assets/img/icon/arrow_link_black.svg") no-repeat;
-      background-color: $yellow;
-      transition: top .5s ease;
+      width: 14px;
+      height: 22px;
+      background: url("/assets/img/icon/arrow_button_scroll_down.svg") center no-repeat transparent;
+      @extend .transition;
     }
 
     &:after {
@@ -379,11 +383,6 @@ h6, .h6 {
   }
 
   &:hover {
-    //span{
-    //  width: px;
-    //  height: 70px;
-    //}
-
     &:after {
       left: 150%
     }
