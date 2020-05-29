@@ -52,37 +52,6 @@
 
 .banner-slider {
   .text {
-    &_header {
-      font-size: 90px;
-      line-height: 105px;
-      text-transform: initial;
-
-      @media #{$viewport-320} {
-        font-size: 40px;
-        line-height: 60px;
-      }
-
-      @media #{$viewport-480} {
-        font-size: 60px;
-        line-height: 80px;
-      }
-
-      @media #{$viewport-750} {
-        font-size: 70px;
-        line-height: 80px;
-      }
-
-      @media #{$viewport-970} {
-        font-size: 80px;
-        line-height: 95px;
-      }
-
-      @media #{$viewport-1280} {
-        font-size: 90px;
-        line-height: 105px;
-      }
-    }
-
     &_body {
       font-size: 20px;
       line-height: 36px;

@@ -116,7 +116,7 @@
     }
 
     @media #{$viewport-320} {
-      margin: 20px 0;
+
     }
 
     @media #{$viewport-480} {
@@ -135,6 +135,13 @@
 
     @media #{$viewport-320} {
       margin-right: 0;
+      width: 160px;
+      font-size: 16px;
+    }
+
+    @media #{$viewport-480} {
+      width: 180px;
+      font-size: 22px;
     }
 
     @media #{$viewport-1280} {
@@ -230,9 +237,16 @@
   }
 
   .form {
-    &_submit {
-      width: 150px;
-      font-size: 16px !important;
+    &_submit.active-item {
+      @media #{$viewport-320} {
+        width: 150px;
+        font-size: 16px;
+      }
+
+      @media #{$viewport-480} {
+        font-size: 22px;
+        width: inherit;
+      }
     }
 
     &_reset {

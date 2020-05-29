@@ -260,7 +260,7 @@ h6, .h6 {
     font-size: 16px;
     font-family: $font-family-roboto;
     font-weight: $oswaldSemiBold;
-    padding: 0 10px 0 0;
+    padding: 0 20px 0 0;
     position: relative;
 
     @include themify($themes) {
@@ -271,10 +271,10 @@ h6, .h6 {
       content: '';
       display: inline-block;
       position: absolute;
-      top: 5px;
+      top: 3px;
       right: -5px;
-      width: 12px;
-      height: 8px;
+      width: 20px;
+      height: 10px;
       @extend .transition;
 
       @include themify($themes) {

@@ -10,8 +10,6 @@ $(document).ready(function(){
     return false;
   });
 
-  console.log(scrollHeight);
-
   $(window).on('scroll', function(){
     const scrollTop = $('html').scrollTop();
 

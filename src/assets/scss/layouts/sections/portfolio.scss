@@ -52,6 +52,29 @@
     text-overflow: ellipsis;
   }
 
+  .rounded-link {
+    @media #{$viewport-320} {
+      display: none;
+    }
+
+    @media #{$viewport-750} {
+      margin: 0;
+    }
+
+    @media #{$viewport-600} {
+
+    }
+
+    @media #{$viewport-970} {
+      display: block;
+      margin: 20px 0 0;
+    }
+
+    @media #{$viewport-1280} {
+      margin: 20px 0 0;
+    }
+  }
+
   &_item {
     .text {
       margin-left: 35px;
@@ -59,32 +82,38 @@
       @media #{$viewport-320} {
         margin-left: 0;
       }
+
       &_header {
         margin: 0 0 55px;
+        text-transform: initial;
 
         @media #{$viewport-320} {
           font-size: 40px;
-          line-height: 48px;
+          line-height: 60px;
         }
 
         @media #{$viewport-480} {
-          font-size: 50px;
-          line-height: 58px;
+          font-size: 60px;
+          line-height: 80px;
         }
 
         @media #{$viewport-750} {
-          font-size: 60px;
-          line-height: 68px;
+          font-size: 70px;
+          line-height: 80px;
+          position: relative;
+          white-space: nowrap;
+          z-index: 1;
         }
 
         @media #{$viewport-970} {
-          font-size: 74px;
-          line-height: 82px;
+          font-size: 80px;
+          line-height: 95px;
         }
 
         @media #{$viewport-1280} {
-          font-size: 80px;
-          line-height: 68px;
+
+          font-size: 90px;
+          line-height: 105px;
         }
       }
 
@@ -169,28 +198,4 @@
       bottom: 0;
     }
   }
-}
-
-@media #{$viewport-320} {
-
-}
-
-@media #{$viewport-480} {
-
-}
-
-@media #{$viewport-600} {
-
-}
-
-@media #{$viewport-750} {
-
-}
-
-@media #{$viewport-970} {
-
-}
-
-@media #{$viewport-1280} {
-
 }

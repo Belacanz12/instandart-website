@@ -8,12 +8,23 @@
   height: 128px;
 
   &_arrow {
+    $width: 30px;
     position: absolute;
-
-    left: -4px;
-    width: 10px;
-    height: 10px;
+    left: -$width/2;
+    width: $width;
+    height: $width;
     cursor: pointer;
+  }
+
+  &_arrow_wrap {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 10px;
+    height: 4px;
     @include themify($themes) {
       background: themed('rangeBgArrow');
     }
