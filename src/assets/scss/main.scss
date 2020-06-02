@@ -19,6 +19,9 @@
 // layouts
 @import "layouts/index";
 
+// page
+@import "layouts/contact_us/jumbotron";
+
 // modules
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
@@ -27,6 +30,7 @@
 @import "particles/header/header";
 
 @import "particles/form";
+@import "particles/breadcrumbs";
 @import "particles/aside";
 @import "particles/button";
 @import "particles/footer";

@@ -25,7 +25,7 @@
 .header-font {
   //color: $black17;
   font-family: $font-family-oswald;
-  font-weight: 900;
+  font-weight: $oswaldSemiBold;
   text-transform: uppercase;
 
   @include themify($themes) {

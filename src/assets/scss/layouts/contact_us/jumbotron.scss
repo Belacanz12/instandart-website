@@ -1,0 +1,26 @@
+.page {
+  &--contacts-page--jumbotron {
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+        height: 655px;
+      }
+
+      @media #{$viewport-480} {
+        height: 655px;
+      }
+
+      @media #{$viewport-600} {
+        height: 655px;
+      }
+
+      @media #{$viewport-970} {
+        height: 528px;
+      }
+
+      @media #{$viewport-1280} {
+        height: 877px;
+      }
+    }
+  }
+}

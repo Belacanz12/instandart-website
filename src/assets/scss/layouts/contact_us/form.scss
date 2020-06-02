@@ -1,0 +1,26 @@
+.page {
+  &--contacts-page--form {
+    &, .page_container,
+    .page_content {
+      @media #{$viewport-320} {
+        height: 852px;
+      }
+
+      @media #{$viewport-480} {
+        height: 852px;
+      }
+
+      @media #{$viewport-600} {
+        height: 940px;
+      }
+
+      @media #{$viewport-970} {
+        height: 693px;
+      }
+
+      @media #{$viewport-1280} {
+        height: 820px;
+      }
+    }
+  }
+}
