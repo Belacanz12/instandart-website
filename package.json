@@ -37,7 +37,7 @@
     "fitty": "^2.3.0",
     "gsap": "^3.2.6",
     "jquery": "^3.4.1",
-    "jquery-validation": "^1.19.1",
+    "jquery-validation": "^1.19.5",
     "materialize-css": "^1.0.0-rc.2",
     "popper.js": "^1.16.1",
     "pug": "^2.0.4",
